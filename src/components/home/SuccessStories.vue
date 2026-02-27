@@ -41,32 +41,9 @@
 </template>
 
 <script setup lang="ts">
-const stories = [
-  {
-    id: '1',
-    username: '张小明',
-    role: 'AI内容创作者',
-    revenue: '¥12,800',
-    description: '通过AI红书文案工具，3个月从0粉丝做到10万粉，月收入稳定破万。',
-    gradientClass: 'from-blue-500 to-indigo-600'
-  },
-  {
-    id: '2',
-    username: '李晓雯',
-    role: '知识付费创业者',
-    revenue: '¥28,500',
-    description: '利用AI工作坊的课程模板，快速搭建知识付费体系，首月变现超2万。',
-    gradientClass: 'from-purple-500 to-pink-600'
-  },
-  {
-    id: '3',
-    username: '王大力',
-    role: '电商运营',
-    revenue: '¥45,000',
-    description: 'AI选品分析工具帮我精准找到爆款，店铺GMV翻了3倍，月利润4.5万。',
-    gradientClass: 'from-green-500 to-teal-600'
-  }
-]
+import { mockStories } from '@/data/content'
+
+const stories = mockStories
 </script>
 
 <style scoped>

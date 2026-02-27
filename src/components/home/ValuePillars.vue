@@ -25,30 +25,7 @@
 </template>
 
 <script setup lang="ts">
-const pillars = [
-  {
-    icon: '📚',
-    title: '项目模板库',
-    desc: '200+经过验证的AI创业脚本，拿来即用',
-    bgColor: 'bg-blue-50'
-  },
-  {
-    icon: '🤖',
-    title: 'AI工作台',
-    desc: '智能辅助工具，加速项目落地执行',
-    bgColor: 'bg-purple-50'
-  },
-  {
-    icon: '👥',
-    title: 'Pro社区',
-    desc: '5000+创客交流，实战经验共享',
-    bgColor: 'bg-green-50'
-  },
-  {
-    icon: '💎',
-    title: '全球会员',
-    desc: '专属资源与导师支持，快速突破变现',
-    bgColor: 'bg-orange-50'
-  }
-]
+import { mockPillars } from '@/data/content'
+
+const pillars = mockPillars
 </script>
