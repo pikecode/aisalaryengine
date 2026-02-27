@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.playwright-mcp/
+.spec-workflow/
+screenshot-*.png
+*.local
+.DS_Store
