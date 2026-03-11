@@ -3,9 +3,11 @@
     <!-- Top bar -->
     <div class="max-w-7xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
       <!-- Logo -->
-      <RouterLink to="/" class="flex items-center gap-2 font-bold text-lg text-blue-600">
-        <div class="w-8 h-8 bg-hero-gradient rounded-lg flex items-center justify-center text-white text-sm font-bold">✦</div>
-        <span>AI薪引擎</span>
+      <RouterLink to="/" class="flex items-center gap-2 font-bold text-lg">
+        <div class="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">
+          AI
+        </div>
+        <span class="text-gray-900">AI薪引擎</span>
       </RouterLink>
 
       <!-- PC Nav -->
@@ -22,29 +24,43 @@
       </nav>
 
       <!-- Right Actions -->
-      <div class="flex items-center gap-2">
-        <!-- Theme Toggle -->
-        <ThemeToggle />
-
-        <!-- Language switcher - mobile only -->
-        <div class="md:hidden flex items-center bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-600 gap-1">
-          <span class="text-blue-600">中</span>
-          <span class="text-gray-400">/</span>
-          <span>En</span>
+      <div class="flex items-center gap-3">
+        <!-- Language switcher -->
+        <div class="flex items-center bg-gray-100 rounded-lg px-3 py-1.5 text-sm font-medium gap-2">
+          <span class="text-gray-900">中</span>
+          <span class="text-gray-900">En</span>
         </div>
-        <!-- Icons -->
-        <button class="flex items-center justify-center w-8 h-8 rounded-lg hover:bg-gray-100 transition-colors text-gray-500">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <!-- Search Icon -->
+        <button class="flex items-center justify-center w-9 h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </button>
-        <button class="flex items-center justify-center w-8 h-8 rounded-lg hover:bg-gray-100 transition-colors text-gray-500">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <!-- Notification Icon with Badge -->
+        <button class="relative flex items-center justify-center w-9 h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
+          <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">2</span>
         </button>
-        <button class="hidden md:block btn-secondary text-sm py-1.5 px-3">登录</button>
-        <button class="btn-primary text-sm py-1.5 px-3">注册</button>
+
+        <!-- Cart Icon with Badge -->
+        <button class="relative flex items-center justify-center w-9 h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">2</span>
+        </button>
+
+        <!-- Buttons -->
+        <button class="px-5 py-2 rounded-lg text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
+          注册
+        </button>
+        <button class="px-5 py-2 rounded-lg text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+          登录
+        </button>
       </div>
     </div>
 
