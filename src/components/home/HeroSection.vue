@@ -1,100 +1,153 @@
 <template>
-  <section class="relative overflow-hidden pt-20 pb-12 bg-white">
-    <div class="relative max-w-7xl mx-auto px-4 md:px-6 w-full">
-      <div class="max-w-5xl mx-auto text-center">
+  <section class="relative overflow-hidden pt-20 pb-16 bg-gradient-to-br from-blue-100 via-purple-50 to-white">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <!-- Flowing curves decoration -->
+      <div class="absolute top-0 left-0 w-full h-full">
+        <svg class="absolute top-0 left-0 w-full h-full opacity-40" viewBox="0 0 1440 800" preserveAspectRatio="none">
+          <path d="M0,200 Q360,100 720,200 T1440,200 L1440,0 L0,0 Z" fill="url(#gradient1)" />
+          <path d="M0,400 Q360,300 720,400 T1440,400 L1440,0 L0,0 Z" fill="url(#gradient2)" />
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(59, 130, 246);stop-opacity:0.3" />
+              <stop offset="100%" style="stop-color:rgb(147, 51, 234);stop-opacity:0.1" />
+            </linearGradient>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(96, 165, 250);stop-opacity:0.2" />
+              <stop offset="100%" style="stop-color:rgb(168, 85, 247);stop-opacity:0.1" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <!-- Right side geometric decoration -->
+      <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-200/20 to-transparent"></div>
+      <div class="absolute top-20 right-20 w-64 h-64 bg-blue-400/10 rounded-lg rotate-12 blur-2xl"></div>
+    </div>
 
-        <!-- Title -->
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">
+    <div class="relative max-w-6xl mx-auto px-4 md:px-6 w-full">
+      <div class="text-center">
+
+        <!-- Small Title -->
+        <p class="text-base md:text-lg text-gray-600 mb-4">
+          无论是创业还是副业，我们帮你迈出第一步
+        </p>
+
+        <!-- Main Title -->
+        <h1 class="text-4xl md:text-6xl font-bold mb-10 leading-tight text-gray-900">
           AI薪引擎-抓住AI风口
         </h1>
 
-        <p class="text-base md:text-xl mb-10 text-gray-600">
-          无论是创业还是副业，我们帮你迈出第一步。
-        </p>
-
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <button class="font-semibold w-[168px] h-[38px] rounded-full transition-all text-sm bg-gray-900 text-white hover:bg-gray-800 shadow-lg">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <button class="font-semibold px-8 py-3.5 rounded-full transition-all text-base bg-gray-900 text-white hover:bg-gray-800 shadow-lg">
             成为签约创客
           </button>
-          <button class="font-semibold w-[168px] h-[38px] rounded-full transition-all text-sm bg-white text-gray-800 border-2 border-gray-300 hover:bg-gray-50">
+          <button class="font-semibold px-8 py-3.5 rounded-full transition-all text-base bg-white text-gray-900 border-2 border-gray-300 hover:bg-gray-50">
             创造我的项目
           </button>
         </div>
 
-        <!-- Three Overlapping Circle Cards with Images -->
-        <div class="relative h-80 md:h-96 mb-8">
-          <!-- Left Circle -->
-          <div class="absolute left-[5%] md:left-[15%] top-8 w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl z-10 border-4 border-blue-500">
-            <div class="relative w-full h-full bg-gradient-to-br from-blue-900 to-indigo-900">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                <div class="text-4xl md:text-5xl font-bold mb-2">200+</div>
-                <div class="text-sm md:text-base">经过验证的创业副本</div>
-              </div>
-              <!-- Decorative elements -->
-              <div class="absolute inset-0 opacity-30">
-                <div class="absolute top-1/4 left-1/4 w-20 h-20 bg-blue-400 rounded-lg blur-xl"></div>
-              </div>
-            </div>
+        <!-- Search Card -->
+        <div class="bg-white rounded-3xl shadow-2xl p-8 mb-8 max-w-4xl mx-auto">
+          <!-- Quick Search Title -->
+          <div class="flex items-center gap-2 mb-5">
+            <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+            <span class="text-sm font-medium text-gray-800">快速搜索</span>
           </div>
 
-          <!-- Center Circle (Largest) -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-0 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl z-20 border-4 border-purple-500">
-            <div class="relative w-full h-full bg-gradient-to-br from-purple-900 via-pink-800 to-purple-900">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                <div class="text-5xl md:text-6xl font-bold mb-2">5000+</div>
-                <div class="text-sm md:text-base">早期创客已加入</div>
-              </div>
-              <!-- AI Hand illustration placeholder -->
-              <div class="absolute inset-0 flex items-center justify-center opacity-40">
-                <div class="text-8xl">🤖</div>
-              </div>
+          <!-- Search Input -->
+          <div class="flex items-center gap-3 mb-5">
+            <div class="flex-1 flex items-center gap-3 bg-gray-100 rounded-xl px-5 py-3.5">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                v-model="searchQuery"
+                type="text"
+                placeholder="请输入关键词，快速找到适合你的项目"
+                class="flex-1 bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400"
+              />
             </div>
+            <button class="font-semibold px-8 py-3.5 rounded-xl text-sm bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg whitespace-nowrap">
+              开始创作
+            </button>
           </div>
 
-          <!-- Right Circle -->
-          <div class="absolute right-[5%] md:right-[15%] top-8 w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl z-10 border-4 border-cyan-500">
-            <div class="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-900">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                <div class="text-4xl md:text-5xl font-bold mb-2">200+</div>
-                <div class="text-sm md:text-base">社区分享实践案例</div>
-              </div>
-              <!-- Decorative elements -->
-              <div class="absolute inset-0 opacity-20">
-                <div class="absolute top-1/3 right-1/4 w-24 h-24 bg-cyan-400 rounded-full blur-2xl"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Down Arrow Button -->
-          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center cursor-pointer hover:bg-gray-800 transition-colors z-30 shadow-xl border-2 border-yellow-400">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-            </svg>
+          <!-- Hot Tags -->
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <span class="text-sm text-gray-600">热门：</span>
+            <button class="text-sm px-4 py-1.5 rounded-md bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors font-medium">
+              AI写作
+            </button>
+            <button class="text-sm px-4 py-1.5 rounded-md bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors font-medium">
+              自媒体
+            </button>
+            <button class="text-sm px-4 py-1.5 rounded-md bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors font-medium">
+              电商项目
+            </button>
+            <button class="text-sm px-4 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200 transition-colors font-medium">
+              知识付费
+            </button>
           </div>
         </div>
 
-        <!-- Search Box -->
-        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-lg border border-gray-200 p-8 max-w-4xl mx-auto">
-          <div class="flex items-center gap-3 mb-6">
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="请输入关键词，快速找到适合你的项目"
-              class="flex-1 bg-white rounded-2xl px-6 py-4 outline-none text-base border-0 shadow-sm"
-            />
-            <button class="font-semibold px-10 py-4 rounded-2xl text-base bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-md flex items-center gap-2 whitespace-nowrap">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              寻找项目
-            </button>
-          </div>
-          <div class="flex gap-3 flex-wrap">
-            <button v-for="pill in filterPills" :key="pill"
-              class="text-sm px-5 py-2.5 rounded-xl bg-white border-2 border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600 transition-all">
-              {{ pill }}
-            </button>
+        <!-- Filter Pills -->
+        <div class="flex flex-wrap gap-4 justify-center mb-16">
+          <button class="flex items-center gap-2 px-6 py-2.5 rounded-full border border-yellow-400 bg-yellow-50/80 text-gray-800 hover:bg-yellow-100 transition-all">
+            <span class="text-base">💰</span>
+            <span class="text-sm font-medium">低于1000元</span>
+            <span class="text-sm">→</span>
+          </button>
+          <button class="flex items-center gap-2 px-6 py-2.5 rounded-full border border-blue-400 bg-blue-50/80 text-gray-800 hover:bg-blue-100 transition-all">
+            <span class="text-base">🕐</span>
+            <span class="text-sm font-medium">副业/碎片时间</span>
+            <span class="text-sm">→</span>
+          </button>
+          <button class="flex items-center gap-2 px-6 py-2.5 rounded-full border border-green-400 bg-green-50/80 text-gray-800 hover:bg-green-100 transition-all">
+            <span class="text-base">✓</span>
+            <span class="text-sm font-medium">无代码</span>
+            <span class="text-sm">→</span>
+          </button>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg p-8 max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:divide-x divide-gray-200">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-gray-900">200+</div>
+                <div class="text-sm text-gray-600">经过验证的创业副本</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:pl-8">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-gray-900">5000+</div>
+                <div class="text-sm text-gray-600">早期创客已加入</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:pl-8">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-gray-900">100+</div>
+                <div class="text-sm text-gray-600">社区分享的实践案例</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -107,5 +160,4 @@
 import { ref } from 'vue'
 
 const searchQuery = ref('')
-const filterPills = ['低于1000元', '副业/碎片时间', '无代码']
 </script>

@@ -4,8 +4,9 @@
     <div class="max-w-7xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-2 font-bold text-lg">
-        <div class="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">
-          AI
+        <div class="w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-sm font-bold relative">
+          <span>AI</span>
+          <span class="absolute -top-1 -right-1 text-yellow-300 text-xs">✦</span>
         </div>
         <span class="text-gray-900">AI薪引擎</span>
       </RouterLink>
@@ -25,8 +26,17 @@
 
       <!-- Right Actions -->
       <div class="flex items-center gap-3">
+        <!-- 打卡按钮 -->
+        <button class="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 transition-all shadow-md">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+            <path d="M12 14c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z" fill="currentColor"/>
+          </svg>
+          打卡
+        </button>
+
         <!-- Language switcher -->
-        <div class="flex items-center bg-gray-100 rounded-lg px-3 py-1.5 text-sm font-medium gap-2">
+        <div class="flex items-center bg-white rounded-lg px-3 py-1.5 text-sm font-medium gap-2 border border-gray-200">
           <span class="text-gray-900">中</span>
           <span class="text-gray-900">En</span>
         </div>
@@ -88,7 +98,7 @@ import ThemeToggle from './ThemeToggle.vue'
 const navItems: NavItem[] = [
   { label: 'AI创业机会库', path: '/projects' },
   { label: 'AI项目工作台', path: '/workshop' },
-  { label: '社区中心', path: '/community' },
+  { label: '社群中心', path: '/community' },
   { label: '定价与会员', path: '/membership' }
 ]
 </script>

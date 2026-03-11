@@ -36,7 +36,7 @@
           <div class="text-3xl font-bold text-yellow-300">
             ¥ 1,240,000
           </div>
-          <div class="text-xs text-white/70 mt-1">累计向创客分红</div>
+          <div class="text-xs text-white/70 mt-1">已有2000+创客获得收益</div>
         </div>
 
       </div>

@@ -44,14 +44,14 @@
 
 <script setup lang="ts">
 const users = [
-  { id: 1, name: '张一', desc: '签到了第一桶金', bgColor: 'bg-purple-500' },
-  { id: 2, name: '张一', desc: '签到了第一桶金', bgColor: 'bg-purple-500' },
-  { id: 3, name: '李明', desc: '项目极其详实', bgColor: 'bg-blue-500' },
-  { id: 4, name: '王锐', desc: '项目极其详实', bgColor: 'bg-green-500' },
-  { id: 5, name: '经理', desc: '签到了第一桶金', bgColor: 'bg-purple-500' },
-  { id: 6, name: '艾德', desc: '项目极其详实', bgColor: 'bg-blue-500' },
-  { id: 7, name: '吴总', desc: '项目极其详实', bgColor: 'bg-green-500' },
-  { id: 8, name: '吴总', desc: '项目极其详实', bgColor: 'bg-green-500' }
+  { id: 1, name: '李明', desc: '通过AI写作项目，月入2万+', bgColor: 'bg-blue-500' },
+  { id: 2, name: '王芳', desc: '利用电商项目，实现财务自由', bgColor: 'bg-pink-500' },
+  { id: 3, name: '张伟', desc: '自媒体创业，粉丝破10万', bgColor: 'bg-green-500' },
+  { id: 4, name: '刘洋', desc: '知识付费课程，月收入5万+', bgColor: 'bg-orange-500' },
+  { id: 5, name: '陈静', desc: 'AI工具开发，获得天使投资', bgColor: 'bg-purple-500' },
+  { id: 6, name: '赵强', desc: '副业项目，月入1万+', bgColor: 'bg-indigo-500' },
+  { id: 7, name: '孙丽', desc: '内容创作，打造个人IP', bgColor: 'bg-teal-500' },
+  { id: 8, name: '周杰', desc: '技术咨询，年入50万+', bgColor: 'bg-cyan-500' }
 ]
 </script>
 
