@@ -1,44 +1,63 @@
 <template>
-  <section class="bg-blue-600 py-8 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-      <div class="flex items-center justify-between gap-8">
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="bg-white rounded-3xl shadow-lg p-8 md:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-        <!-- Left: Coin Icons -->
-        <div class="hidden md:block relative flex-shrink-0">
-          <div class="relative w-32 h-32">
-            <!-- Main Coin -->
-            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-600 shadow-2xl flex items-center justify-center">
-              <span class="text-4xl">¥</span>
+          <!-- Left: Text Content -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              不仅仅是创造，更是流量变现
+            </h2>
+            <p class="text-base text-gray-600 mb-6 leading-relaxed">
+              发布项目，精准匹配Pro会员。赚取信息解锁费，私域流量沉淀。
+            </p>
+            <button class="inline-flex items-center gap-2 text-gray-700 font-medium hover:text-blue-600 transition-colors">
+              <span>开启线索变现</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <p class="text-sm text-gray-400 mt-2">
+              平台仅提供信息展示与撮合服务，交易由双方自行沟通
+            </p>
+          </div>
+
+          <!-- Right: Amount Visualization -->
+          <div class="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 min-h-[320px]">
+            <div class="absolute top-4 right-6 text-right">
+              <div class="text-xs text-gray-400 mb-1">累计向创客分红</div>
+              <div class="text-sm font-semibold text-yellow-500">¥ 1,240,000</div>
             </div>
-            <!-- Small Coins -->
-            <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 shadow-lg flex items-center justify-center">
-              <span class="text-lg">¥</span>
+
+            <!-- Large amounts -->
+            <div class="absolute top-16 left-8 bg-white/60 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-sm">
+              <div class="text-3xl font-bold text-yellow-500">¥ 1,240,000</div>
             </div>
-            <div class="absolute -bottom-2 -left-2 w-8 h-8 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 shadow-lg flex items-center justify-center">
-              <span class="text-sm">¥</span>
+
+            <div class="absolute top-20 right-12 bg-white/80 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-md">
+              <div class="text-4xl font-bold text-yellow-500">¥ 1,240,000</div>
+            </div>
+
+            <!-- Small amounts -->
+            <div class="absolute bottom-20 left-12 text-xl font-semibold text-yellow-400">
+              ¥ 1,240,000
+            </div>
+
+            <div class="absolute bottom-16 left-1/2 -translate-x-1/2 text-lg font-semibold text-yellow-400">
+              ¥ 1,240,000
+            </div>
+
+            <div class="absolute bottom-12 right-8 text-base font-semibold text-yellow-400">
+              ¥ 1,240,000
+            </div>
+
+            <div class="absolute bottom-20 right-20 text-2xl font-bold text-yellow-500">
+              ¥ 1,240,000
             </div>
           </div>
-        </div>
 
-        <!-- Center: Text Content -->
-        <div class="flex-1 text-center md:text-left">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
-            不仅仅是创造，更是变现
-          </h2>
-          <p class="text-sm md:text-base text-white/90">
-            在AI工作台完成项目后，一键发布到创客市场，平台担保交易，坐享技术服务费收益
-          </p>
         </div>
-
-        <!-- Right: Amount Display -->
-        <div class="hidden md:block flex-shrink-0 text-right">
-          <div class="text-xs text-white/70 mb-1">累计向创客分红</div>
-          <div class="text-3xl font-bold text-yellow-300">
-            ¥ 1,240,000
-          </div>
-          <div class="text-xs text-white/70 mt-1">已有2000+创客获得收益</div>
-        </div>
-
       </div>
     </div>
   </section>

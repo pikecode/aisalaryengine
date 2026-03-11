@@ -4,9 +4,8 @@
     <main>
       <HeroSection />
       <ProjectGrid />
-      <SuccessStories />
       <ValuePillars />
-      <PromoBanner />
+      <SuccessStories />
       <PricingSection />
     </main>
     <AppFooter />
@@ -20,6 +19,5 @@ import HeroSection from '@/components/home/HeroSection.vue'
 import ProjectGrid from '@/components/home/ProjectGrid.vue'
 import SuccessStories from '@/components/home/SuccessStories.vue'
 import ValuePillars from '@/components/home/ValuePillars.vue'
-import PromoBanner from '@/components/home/PromoBanner.vue'
 import PricingSection from '@/components/home/PricingSection.vue'
 </script>

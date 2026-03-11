@@ -52,7 +52,6 @@
           <ul class="space-y-2 text-sm">
             <li><a href="#" class="hover:text-gray-900 transition-colors">帮助中心</a></li>
             <li><a href="#" class="hover:text-gray-900 transition-colors">使用教程</a></li>
-            <li><a href="#" class="hover:text-gray-900 transition-colors">常见问题</a></li>
           </ul>
         </div>
 

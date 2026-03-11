@@ -8,31 +8,136 @@
       </div>
 
       <!-- Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         <div
-          v-for="pillar in pillars"
+          v-for="(pillar, index) in pillars"
           :key="pillar.title"
-          class="relative bg-white rounded-2xl p-6 aspect-square group cursor-pointer hover:shadow-xl transition-all duration-300 border border-gray-100"
+          class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-3xl p-8 flex flex-col group cursor-pointer hover:shadow-lg transition-all duration-300"
         >
-          <!-- Icon -->
-          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="pillar.icon" />
-            </svg>
+          <!-- Illustration Area -->
+          <div class="w-full h-40 mb-6 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center overflow-hidden relative">
+            <div v-if="index === 0" class="absolute left-4 w-20 h-20 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 rounded-lg transform -rotate-12"></div>
+            <div v-if="index === 0" class="absolute right-6 flex flex-col gap-2">
+              <div class="w-16 h-2 bg-blue-200 rounded"></div>
+              <div class="w-12 h-2 bg-blue-200 rounded"></div>
+              <div class="flex gap-1 mt-2">
+                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <div class="w-2 h-2 bg-blue-300 rounded-full"></div>
+                <div class="w-2 h-2 bg-blue-300 rounded-full"></div>
+                <div class="w-2 h-2 bg-blue-300 rounded-full"></div>
+              </div>
+            </div>
+
+            <div v-if="index === 1" class="flex flex-col gap-2 w-full px-6">
+              <div class="flex gap-2">
+                <div class="w-12 h-2 bg-blue-200 rounded"></div>
+                <div class="w-8 h-2 bg-blue-200 rounded"></div>
+              </div>
+              <div class="w-16 h-3 bg-blue-400 rounded"></div>
+              <div class="flex gap-2 mt-2">
+                <div class="w-10 h-2 bg-blue-200 rounded"></div>
+                <div class="w-6 h-2 bg-blue-200 rounded"></div>
+              </div>
+              <div class="flex gap-2">
+                <div class="w-8 h-2 bg-blue-200 rounded"></div>
+                <div class="w-12 h-2 bg-blue-300 rounded"></div>
+              </div>
+            </div>
+
+            <div v-if="index === 2" class="relative w-full h-full flex items-center justify-center">
+              <div class="absolute top-4 left-6 w-10 h-10 bg-blue-200 rounded-full"></div>
+              <div class="absolute top-6 right-8 bg-blue-100 rounded-2xl px-4 py-2 w-32">
+                <div class="w-full h-2 bg-blue-300 rounded mb-1"></div>
+                <div class="w-20 h-2 bg-blue-200 rounded"></div>
+              </div>
+            </div>
+
+            <div v-if="index === 3" class="relative w-full h-full flex items-center justify-center">
+              <div class="absolute top-4 right-6 w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                </svg>
+              </div>
+              <div class="absolute bottom-6 left-6 bg-blue-50 rounded-2xl px-4 py-3 w-36 border border-blue-200">
+                <div class="w-full h-2 bg-blue-300 rounded mb-2"></div>
+                <div class="w-24 h-2 bg-blue-200 rounded"></div>
+              </div>
+            </div>
           </div>
 
           <!-- Content -->
-          <div class="mb-4">
-            <h3 class="text-lg font-bold text-gray-900 mb-3">{{ pillar.title }}</h3>
+          <div class="flex-1 mb-4">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">{{ pillar.title }}</h3>
             <p class="text-sm text-gray-600 leading-relaxed">{{ pillar.desc }}</p>
           </div>
 
-          <!-- Arrow Button -->
-          <div class="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center transition-all group-hover:bg-blue-700 group-hover:scale-110">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+          <!-- Learn More Link -->
+          <div class="flex items-center justify-end gap-2 text-gray-600 text-sm font-medium group-hover:text-blue-600 transition-colors">
+            <span>了解更多</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </div>
+        </div>
+      </div>
+
+      <!-- Promo Section -->
+      <div class="bg-gray-50 rounded-3xl shadow-lg p-8 md:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Left: Text Content -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              不仅仅是创造，更是流量变现
+            </h2>
+            <p class="text-base text-gray-600 mb-6 leading-relaxed">
+              发布项目，精准匹配Pro会员。赚取信息解锁费，私域流量沉淀。
+            </p>
+            <button class="inline-flex items-center gap-2 text-gray-700 font-medium hover:text-blue-600 transition-colors">
+              <span>开启线索变现</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <p class="text-sm text-gray-400 mt-2">
+              平台仅提供信息展示与撮合服务，交易由双方自行沟通
+            </p>
+          </div>
+
+          <!-- Right: Amount Visualization -->
+          <div class="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 min-h-[320px]">
+            <div class="absolute top-4 right-6 text-right">
+              <div class="text-xs text-gray-400 mb-1">累计向创客分红</div>
+              <div class="text-sm font-semibold text-yellow-500">¥ 1,240,000</div>
+            </div>
+
+            <!-- Large amounts -->
+            <div class="absolute top-16 left-8 bg-white/60 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-sm">
+              <div class="text-3xl font-bold text-yellow-500">¥ 1,240,000</div>
+            </div>
+
+            <div class="absolute top-20 right-12 bg-white/80 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-md">
+              <div class="text-4xl font-bold text-yellow-500">¥ 1,240,000</div>
+            </div>
+
+            <!-- Small amounts -->
+            <div class="absolute bottom-20 left-12 text-xl font-semibold text-yellow-400">
+              ¥ 1,240,000
+            </div>
+
+            <div class="absolute bottom-16 left-1/2 -translate-x-1/2 text-lg font-semibold text-yellow-400">
+              ¥ 1,240,000
+            </div>
+
+            <div class="absolute bottom-12 right-8 text-base font-semibold text-yellow-400">
+              ¥ 1,240,000
+            </div>
+
+            <div class="absolute bottom-20 right-20 text-2xl font-bold text-yellow-500">
+              ¥ 1,240,000
+            </div>
+          </div>
+
         </div>
       </div>
 
