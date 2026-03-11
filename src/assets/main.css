@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme Variables */
+:root[data-theme="dark-purple"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border: #334155;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -15,8 +38,8 @@
   }
 
   body {
-    background-color: #f8fafc;
-    color: #1e293b;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
   }
 }

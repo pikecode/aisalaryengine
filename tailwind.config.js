@@ -16,6 +16,20 @@ export default {
           blue: '#1a56db',
           indigo: '#4f46e5',
           purple: '#7c3aed'
+        },
+        theme: {
+          bg: {
+            primary: 'var(--bg-primary)',
+            secondary: 'var(--bg-secondary)',
+            card: 'var(--bg-card)'
+          },
+          text: {
+            primary: 'var(--text-primary)',
+            secondary: 'var(--text-secondary)'
+          },
+          border: 'var(--border)',
+          accent: 'var(--accent)',
+          'accent-hover': 'var(--accent-hover)'
         }
       },
       fontFamily: {

@@ -23,6 +23,9 @@
 
       <!-- Right Actions -->
       <div class="flex items-center gap-2">
+        <!-- Theme Toggle -->
+        <ThemeToggle />
+
         <!-- Language switcher - mobile only -->
         <div class="md:hidden flex items-center bg-gray-100 rounded-full px-2 py-1 text-xs font-medium text-gray-600 gap-1">
           <span class="text-blue-600">中</span>
@@ -64,6 +67,7 @@
 
 <script setup lang="ts">
 import type { NavItem } from '@/types'
+import ThemeToggle from './ThemeToggle.vue'
 
 const navItems: NavItem[] = [
   { label: 'AI创业机会库', path: '/projects' },
