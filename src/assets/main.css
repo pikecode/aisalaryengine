@@ -135,5 +135,6 @@
 }
 
 /* Mobile tap highlight */
-ebkit-tap-highlight-color: transparent;
+* {
+  -webkit-tap-highlight-color: transparent;
 }
