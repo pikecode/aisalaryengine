@@ -103,8 +103,3 @@ const navItems: NavItem[] = [
   { label: '定价与会员', path: '/membership' }
 ]
 </script>
-
-<style scoped>
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-</style>

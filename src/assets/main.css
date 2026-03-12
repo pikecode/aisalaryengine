@@ -53,6 +53,11 @@
     @apply bg-white hover:bg-gray-50 text-blue-600 font-semibold px-6 py-3 rounded-xl border border-blue-200 transition-all duration-200 cursor-pointer;
   }
 
+  /* 移动端按钮优化 */
+  .btn-mobile {
+    @apply min-h-[44px] min-w-[44px] active:scale-95 transition-transform duration-150;
+  }
+
   .card {
     @apply bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden;
   }
@@ -70,6 +75,52 @@
   }
 }
 
+@layer utilities {
+  /* 统一的文本截断工具类 */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 统一的滚动条隐藏工具类 */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* 骨架屏动画 */
+  .skeleton {
+    @apply bg-gray-200 animate-pulse rounded;
+  }
+
+  .skeleton-text {
+    @apply h-4 bg-gray-200 animate-pulse rounded;
+  }
+
+  .skeleton-avatar {
+    @apply w-10 h-10 bg-gray-200 animate-pulse rounded-full;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -84,6 +135,5 @@
 }
 
 /* Mobile tap highlight */
-* {
-  -webkit-tap-highlight-color: transparent;
+ebkit-tap-highlight-color: transparent;
 }

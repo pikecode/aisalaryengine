@@ -109,8 +109,3 @@ const quickFilters = [
   { label: '✅ 无代码', value: 'no-code' }
 ]
 </script>
-
-<style scoped>
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-</style>
