@@ -9,14 +9,22 @@
 
       <!-- Cards Grid -->
       <div class="mb-8 md:mb-16">
-        <!-- Mobile: Horizontal Scroll -->
-        <div class="md:hidden overflow-x-auto scrollbar-hide -mx-4 px-4">
-          <div class="flex gap-4 pb-4">
-            <div
+        <!-- Mobile: Swiper -->
+        <div class="md:hidden">
+          <swiper
+            :slides-per-view="1.2"
+            :space-between="16"
+            :centered-slides="true"
+            :initial-slide="1"
+            :pagination="{ clickable: true }"
+            :modules="modules"
+            class="pb-10"
+          >
+            <swiper-slide
               v-for="(pillar, index) in pillars"
               :key="pillar.title"
-              class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-2xl p-6 flex flex-col group cursor-pointer hover:shadow-lg transition-all duration-300 flex-shrink-0 w-[280px]"
             >
+              <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-2xl p-6 flex flex-col group cursor-pointer hover:shadow-lg transition-all duration-300 h-full">
               <!-- Illustration Area -->
               <div class="w-full h-32 mb-4 rounded-xl bg-white/80 backdrop-blur-sm flex items-center justify-center overflow-hidden relative">
                 <div v-if="index === 0" class="absolute left-3 w-16 h-16 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 rounded-lg transform -rotate-12"></div>
@@ -81,8 +89,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
               </div>
-            </div>
-          </div>
+              </div>
+            </swiper-slide>
+          </swiper>
         </div>
 
         <!-- Desktop: Grid -->
@@ -161,59 +170,69 @@
       </div>
 
       <!-- Promo Section -->
-      <div class="bg-gray-50 rounded-2xl md:rounded-3xl shadow-lg p-6 md:p-12">
+      <div class="bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-2xl md:rounded-3xl shadow-xl p-6 md:p-12 overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
 
           <!-- Left: Text Content -->
-          <div>
+          <div class="relative z-10">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               不仅仅是创造，更是流量变现
             </h2>
             <p class="text-sm md:text-base text-gray-600 mb-4 md:mb-6 leading-relaxed">
               发布项目，精准匹配Pro会员。赚取信息解锁费，私域流量沉淀。
             </p>
-            <button class="inline-flex items-center gap-2 text-sm md:text-base text-gray-700 font-medium hover:text-blue-600 transition-colors">
+            <button class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm md:text-base font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl">
               <span>开启线索变现</span>
               <svg class="w-4 md:w-5 h-4 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </button>
-            <p class="text-xs md:text-sm text-gray-400 mt-2">
+            <p class="text-xs md:text-sm text-gray-400 mt-3">
               平台仅提供信息展示与撮合服务，交易由双方自行沟通
             </p>
           </div>
 
           <!-- Right: Amount Visualization -->
-          <div class="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl md:rounded-3xl p-6 md:p-8 min-h-[240px] md:min-h-[320px]">
-            <div class="absolute top-3 md:top-4 right-4 md:right-6 text-right">
-              <div class="text-[10px] md:text-xs text-gray-400 mb-1">累计向创客分红</div>
-              <div class="text-xs md:text-sm font-semibold text-yellow-500">¥ 1,240,000</div>
+          <div class="relative rounded-2xl md:rounded-3xl p-6 md:p-8 min-h-[280px] md:min-h-[360px] overflow-hidden">
+            <!-- Background gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 opacity-60"></div>
+
+            <!-- Top label -->
+            <div class="absolute top-4 right-4 text-right z-10">
+              <div class="text-xs text-gray-500 mb-1">累计向创客分红</div>
+              <div class="text-sm font-bold text-orange-600">¥ 1,240,000+</div>
             </div>
 
-            <!-- Large amounts -->
-            <div class="absolute top-12 md:top-16 left-4 md:left-8 bg-white/60 backdrop-blur-sm rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 shadow-sm">
-              <div class="text-2xl md:text-3xl font-bold text-yellow-500">¥ 1,240,000</div>
+            <!-- Floating amounts with different sizes and positions -->
+            <!-- Large prominent amounts -->
+            <div class="absolute top-16 left-6 bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-xl transform hover:scale-105 transition-transform">
+              <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">¥ 50,000</div>
             </div>
 
-            <div class="absolute top-14 md:top-20 right-6 md:right-12 bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl px-5 md:px-8 py-3 md:py-5 shadow-md">
-              <div class="text-2xl md:text-4xl font-bold text-yellow-500">¥ 1,240,000</div>
+            <div class="absolute top-20 right-8 bg-white/95 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-2xl transform hover:scale-105 transition-transform">
+              <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">¥ 120,000</div>
+            </div>
+
+            <!-- Medium amounts -->
+            <div class="absolute bottom-24 left-8 text-2xl md:text-3xl font-bold text-yellow-500/80">
+              ¥ 28,000
+            </div>
+
+            <div class="absolute bottom-28 right-12 text-xl md:text-2xl font-bold text-orange-500/70">
+              ¥ 35,000
             </div>
 
             <!-- Small amounts -->
-            <div class="absolute bottom-16 md:bottom-20 left-6 md:left-12 text-base md:text-xl font-semibold text-yellow-400">
-              ¥ 1,240,000
+            <div class="absolute bottom-16 left-1/2 -translate-x-1/2 text-lg font-semibold text-yellow-400/60">
+              ¥ 15,000
             </div>
 
-            <div class="absolute bottom-12 md:bottom-16 left-1/2 -translate-x-1/2 text-sm md:text-lg font-semibold text-yellow-400">
-              ¥ 1,240,000
+            <div class="absolute bottom-12 right-6 text-base font-semibold text-orange-400/50">
+              ¥ 8,000
             </div>
 
-            <div class="absolute bottom-10 md:bottom-12 right-4 md:right-8 text-xs md:text-base font-semibold text-yellow-400">
-              ¥ 1,240,000
-            </div>
-
-            <div class="absolute bottom-14 md:bottom-20 right-12 md:right-20 text-lg md:text-2xl font-bold text-yellow-500">
-              ¥ 1,240,000
+            <div class="absolute top-32 left-1/3 text-xl font-bold text-red-400/40">
+              ¥ 22,000
             </div>
           </div>
 
@@ -225,6 +244,13 @@
 </template>
 
 <script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+const modules = [Pagination]
+
 const pillars = [
   {
     title: '项目模版库',
