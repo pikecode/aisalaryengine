@@ -1,19 +1,19 @@
 <template>
   <div class="flex-1">
     <!-- Recommendation Card -->
-    <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 mb-6 text-white relative overflow-hidden">
+    <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl md:rounded-2xl p-4 md:p-8 mb-4 md:mb-6 text-white relative overflow-hidden">
       <div class="relative z-10">
-        <h3 class="text-2xl font-bold mb-2">还没找到方向</h3>
-        <p class="text-blue-100 mb-4">先进行1分钟自我评估</p>
-        <button class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors">
+        <h3 class="text-lg md:text-2xl font-bold mb-1 md:mb-2">还没找到方向</h3>
+        <p class="text-blue-100 mb-3 md:mb-4 text-sm md:text-base">先进行1分钟自我评估</p>
+        <button class="px-4 md:px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-sm md:text-base">
           立即测评
         </button>
       </div>
-      <div class="absolute right-8 top-1/2 -translate-y-1/2 w-32 h-32 bg-white/10 rounded-full"></div>
+      <div class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-16 h-16 md:w-32 md:h-32 bg-white/10 rounded-full"></div>
     </div>
 
     <!-- Project Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
       <ProjectLibraryCard
         v-for="project in projects"
         :key="project.id"
@@ -23,11 +23,11 @@
     </div>
 
     <!-- Load More -->
-    <div v-if="hasMore" class="text-center mt-8">
+    <div v-if="hasMore" class="text-center mt-6 md:mt-8">
       <button
         @click="$emit('load-more')"
         :disabled="loading"
-        class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors disabled:opacity-50"
+        class="px-6 md:px-8 py-2.5 md:py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg md:rounded-xl transition-colors disabled:opacity-50 text-sm md:text-base"
       >
         {{ loading ? '加载中...' : '加载更多项目' }}
       </button>

@@ -1,22 +1,22 @@
 <template>
-  <div class="bg-white rounded-2xl p-4 md:p-6 hover:shadow-lg transition-all relative">
+  <div class="bg-white rounded-xl md:rounded-2xl p-3 md:p-6 hover:shadow-lg transition-all relative">
     <!-- Cost Badge -->
-    <span class="absolute top-3 right-3 md:top-4 md:right-4 px-2 md:px-3 py-1 bg-blue-600 text-white text-[10px] md:text-xs font-medium rounded-full">
+    <span class="absolute top-2 right-2 md:top-4 md:right-4 px-2 md:px-3 py-0.5 md:py-1 bg-blue-600 text-white text-[10px] md:text-xs font-medium rounded-full">
       {{ costLabel }}
     </span>
 
-    <div class="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
+    <div class="flex items-start gap-2 md:gap-4 mb-2 md:mb-4">
       <!-- Icon -->
       <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex-shrink-0"></div>
 
       <div class="flex-1">
         <!-- Revenue -->
-        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-1">
+        <h3 class="text-sm md:text-lg font-bold text-gray-900 mb-1">
           潜力：¥{{ project.revenue }}/月
         </h3>
 
         <!-- Difficulty -->
-        <div class="flex items-center gap-1 mb-2">
+        <div class="flex items-center gap-1 mb-1.5 md:mb-2">
           <span class="text-xs md:text-sm text-gray-500">门槛：</span>
           <div class="flex gap-0.5">
             <svg
@@ -33,11 +33,11 @@
         </div>
 
         <!-- Tags -->
-        <div class="flex flex-wrap gap-1.5 md:gap-2 mb-2 md:mb-3">
+        <div class="flex flex-wrap gap-1 md:gap-2 mb-2">
           <span
             v-for="tag in project.tags.slice(0, 3)"
             :key="tag"
-            class="px-2 md:px-3 py-0.5 md:py-1 bg-purple-100 text-purple-600 text-[10px] md:text-xs rounded-lg"
+            class="px-1.5 md:px-3 py-0.5 md:py-1 bg-purple-100 text-purple-600 text-[10px] md:text-xs rounded-lg"
           >
             {{ tag }}
           </span>
@@ -46,32 +46,32 @@
     </div>
 
     <!-- Title -->
-    <h4 class="font-semibold text-sm md:text-base text-gray-900 mb-2">{{ project.title }}</h4>
+    <h4 class="font-semibold text-sm md:text-base text-gray-900 mb-1.5 md:mb-2">{{ project.title }}</h4>
 
     <!-- Description -->
-    <p class="text-xs md:text-sm text-gray-600 mb-3 md:mb-4 line-clamp-2">{{ project.description }}</p>
+    <p class="text-xs md:text-sm text-gray-600 mb-2 md:mb-4 line-clamp-2">{{ project.description }}</p>
 
     <!-- Views -->
-    <div class="text-[10px] md:text-xs text-gray-400 mb-3 md:mb-4">这 {{ project.views }}人关注</div>
+    <div class="text-[10px] md:text-xs text-gray-400 mb-2 md:mb-4">这 {{ project.views }}人关注</div>
 
     <!-- Actions -->
     <div class="flex flex-col md:flex-row gap-2">
       <button
         @click="$emit('action', 'generate', project)"
-        class="w-full md:flex-1 px-4 py-2 bg-blue-600 text-white text-xs md:text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full md:flex-1 px-3 md:px-4 py-2 bg-blue-600 text-white text-xs md:text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
       >
         一键自动生成项目
       </button>
       <div class="flex gap-2">
         <button
           @click="$emit('action', 'share', project)"
-          class="flex-1 md:flex-none px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
+          class="flex-1 md:flex-none px-3 md:px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
         >
           分享
         </button>
         <button
           @click="$emit('action', 'favorite', project)"
-          class="flex-1 md:flex-none px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
+          class="flex-1 md:flex-none px-3 md:px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
         >
           收藏
         </button>

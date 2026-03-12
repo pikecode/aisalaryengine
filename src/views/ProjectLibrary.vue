@@ -11,7 +11,7 @@
       />
 
       <!-- Main Content -->
-      <section class="py-12">
+      <section class="py-6 md:py-12">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
           <div class="flex gap-6">
 
