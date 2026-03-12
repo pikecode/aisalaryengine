@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden pt-20 pb-16 bg-gradient-to-br from-blue-100 via-purple-50 to-white">
+  <section class="relative overflow-hidden pt-24 md:pt-20 pb-16 bg-gradient-to-br from-blue-100 via-purple-50 to-white">
     <!-- Background decoration -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
       <!-- Flowing curves decoration -->

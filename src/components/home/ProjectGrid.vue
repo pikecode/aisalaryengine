@@ -1,20 +1,20 @@
 <template>
-  <section class="py-16 bg-gray-50">
+  <section class="py-8 md:py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
 
       <!-- Title -->
-      <div class="text-center mb-8">
-        <h2 class="text-4xl font-bold text-gray-900">热门创业项目</h2>
+      <div class="text-center mb-6 md:mb-8">
+        <h2 class="text-2xl md:text-4xl font-bold text-gray-900">热门创业项目</h2>
       </div>
 
       <!-- Filter Tabs -->
-      <div class="overflow-x-auto scrollbar-hide mb-8">
-        <div class="flex gap-3 justify-center">
+      <div class="overflow-x-auto scrollbar-hide mb-6 md:mb-8">
+        <div class="flex gap-2 md:gap-3 justify-start md:justify-center">
           <button
             v-for="tab in tabs"
             :key="tab"
             @click="activeTab = tab"
-            class="px-6 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
+            class="px-4 md:px-6 py-2 md:py-2.5 rounded-lg text-xs md:text-sm font-medium transition-all whitespace-nowrap"
             :class="activeTab === tab
               ? 'bg-gray-800 text-white'
               : 'bg-white text-gray-600 hover:bg-gray-100'"
@@ -25,21 +25,20 @@
       </div>
 
       <!-- Leaderboard Banner -->
-      <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl px-6 py-4 mb-8 flex items-center justify-between max-w-4xl mx-auto border border-blue-100">
-        <div class="flex items-center gap-3">
-          <div class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+      <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl px-4 md:px-6 py-3 md:py-4 mb-6 md:mb-8 flex items-center justify-between max-w-4xl mx-auto border border-blue-100">
+        <div class="flex items-center gap-2 md:gap-3 text-xs md:text-base">
+          <div class="w-6 h-6 md:w-7 md:h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs md:text-sm flex-shrink-0">
             1
           </div>
           <span class="text-gray-700 font-medium">张丽丽</span>
-          <span class="text-gray-600">在xxxxx项目中</span>
+          <span class="text-gray-600 hidden md:inline">在xxxxx项目中</span>
           <span class="text-blue-600 font-semibold">赚了50万</span>
         </div>
-        <div class="flex flex-col gap-0.5">
-          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="flex flex-col gap-0.5 flex-shrink-0">
+          <svg class="w-3 h-3 md:w-4 md:h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
           </svg>
-          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <svg class="w-3 h-3 md:w-4 md:h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </div>
       </div>
