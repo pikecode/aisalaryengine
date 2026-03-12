@@ -8,18 +8,20 @@
       </div>
 
       <!-- Filter Tabs -->
-      <div class="flex gap-3 justify-center mb-8">
-        <button
-          v-for="tab in tabs"
-          :key="tab"
-          @click="activeTab = tab"
-          class="px-6 py-2.5 rounded-lg text-sm font-medium transition-all"
-          :class="activeTab === tab
-            ? 'bg-gray-800 text-white'
-            : 'bg-white text-gray-600 hover:bg-gray-100'"
-        >
-          {{ tab }}
-        </button>
+      <div class="overflow-x-auto scrollbar-hide mb-8">
+        <div class="flex gap-3 justify-center">
+          <button
+            v-for="tab in tabs"
+            :key="tab"
+            @click="activeTab = tab"
+            class="px-6 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
+            :class="activeTab === tab
+              ? 'bg-gray-800 text-white'
+              : 'bg-white text-gray-600 hover:bg-gray-100'"
+          >
+            {{ tab }}
+          </button>
+        </div>
       </div>
 
       <!-- Leaderboard Banner -->

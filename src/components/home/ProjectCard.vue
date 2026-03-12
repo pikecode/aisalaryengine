@@ -4,9 +4,9 @@
     v-if="isFeatured"
     class="rounded-2xl p-6 transition-all duration-200 cursor-pointer hover:shadow-xl border h-full bg-white border-gray-100"
   >
-    <div class="flex items-start gap-6 h-full">
+    <div class="flex flex-col md:flex-row items-start gap-6 h-full">
       <!-- Left side: Badge + Content -->
-      <div class="flex-1">
+      <div class="flex-1 w-full">
         <div class="flex items-start gap-3 mb-3">
           <!-- Cost Badge -->
           <span class="inline-flex flex-col items-center justify-center px-3 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white flex-shrink-0 self-stretch">
@@ -48,8 +48,8 @@
       </div>
 
       <!-- Right side: Stats + Button -->
-      <div class="flex flex-col items-end justify-between">
-        <div class="text-right mb-4">
+      <div class="flex md:flex-col items-center md:items-end justify-between md:justify-between w-full md:w-auto">
+        <div class="text-left md:text-right mb-0 md:mb-4">
           <div class="text-sm flex items-center gap-1 mb-2">
             <span class="text-gray-500">潜力：</span>
             <span class="text-gray-900 font-semibold">¥{{ priceRange }}/月</span>
