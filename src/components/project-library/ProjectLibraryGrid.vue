@@ -13,7 +13,10 @@
     </div>
 
     <!-- Project Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+    <div v-if="loading" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+      <SkeletonProjectCard v-for="n in 6" :key="n" />
+    </div>
+    <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
       <ProjectLibraryCard
         v-for="project in projects"
         :key="project.id"
@@ -48,6 +51,7 @@
 
 <script setup lang="ts">
 import ProjectLibraryCard from './ProjectLibraryCard.vue'
+import SkeletonProjectCard from '@/components/common/SkeletonProjectCard.vue'
 import type { Project } from '@/types'
 
 // Props

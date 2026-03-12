@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useProjectStore } from '@/stores/projects'
 import AppHeader from '@/components/common/AppHeader.vue'
 import AppFooter from '@/components/common/AppFooter.vue'
@@ -53,11 +53,18 @@ import type { Project } from '@/types'
 const projectStore = useProjectStore()
 
 // State
-const loading = ref(false)
+const loading = ref(true)
 const hasMore = ref(true)
 const showMobileFilter = ref(false)
 const searchQuery = ref('')
 const activeFilters = ref<any>({})
+
+// 模拟数据加载
+onMounted(() => {
+  setTimeout(() => {
+    loading.value = false
+  }, 1500)
+})
 
 // Computed
 const filteredProjects = computed(() => {

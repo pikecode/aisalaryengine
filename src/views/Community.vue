@@ -58,7 +58,8 @@
           </div>
 
           <!-- Post List -->
-          <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+          <SkeletonList v-if="loading" :count="5" />
+          <div v-else class="space-y-3 md:space-y-4 mb-6 md:mb-8">
             <div v-for="i in 10" :key="i" class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 hover:shadow-lg transition-all">
 
               <!-- Mobile Layout -->
@@ -217,6 +218,19 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import AppHeader from '@/components/common/AppHeader.vue'
 import AppFooter from '@/components/common/AppFooter.vue'
+import SkeletonList from '@/components/common/SkeletonList.vue'
+
+// 加载状态
+const loading = ref(true)
+
+// 模拟数据加载
+onMounted(() => {
+  // 模拟2秒加载时间
+  setTimeout(() => {
+    loading.value = false
+  }, 2000)
+})
 </script>
