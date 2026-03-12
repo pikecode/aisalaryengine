@@ -39,10 +39,10 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button class="font-semibold px-8 py-3.5 rounded-full transition-all text-base bg-gray-900 text-white hover:bg-gray-800 shadow-lg">
+          <button class="font-semibold px-8 py-3.5 rounded-full transition-all text-base bg-gray-900 text-white hover:bg-gray-800 shadow-lg btn-mobile">
             成为签约创客
           </button>
-          <button class="font-semibold px-8 py-3.5 rounded-full transition-all text-base bg-white text-gray-900 border-2 border-gray-300 hover:bg-gray-50">
+          <button class="font-semibold px-8 py-3.5 rounded-full transition-all text-base bg-white text-gray-900 border-2 border-gray-300 hover:bg-gray-50 btn-mobile">
             创造我的项目
           </button>
         </div>
@@ -68,7 +68,7 @@
                 class="flex-1 bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400"
               />
             </div>
-            <button class="font-semibold px-8 py-3.5 rounded-xl text-sm bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg whitespace-nowrap">
+            <button class="font-semibold px-8 py-3.5 rounded-xl text-sm bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg whitespace-nowrap btn-mobile">
               开始创作
             </button>
           </div>
@@ -76,16 +76,16 @@
           <!-- Hot Tags -->
           <div class="flex items-center gap-2.5 flex-wrap">
             <span class="text-sm text-gray-600">热门：</span>
-            <button class="text-sm px-4 py-1.5 rounded-md bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors font-medium">
+            <button class="text-sm px-4 py-1.5 rounded-md bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors font-medium btn-mobile">
               AI写作
             </button>
-            <button class="text-sm px-4 py-1.5 rounded-md bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors font-medium">
+            <button class="text-sm px-4 py-1.5 rounded-md bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors font-medium btn-mobile">
               自媒体
             </button>
-            <button class="text-sm px-4 py-1.5 rounded-md bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors font-medium">
+            <button class="text-sm px-4 py-1.5 rounded-md bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors font-medium btn-mobile">
               电商项目
             </button>
-            <button class="text-sm px-4 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200 transition-colors font-medium">
+            <button class="text-sm px-4 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200 transition-colors font-medium btn-mobile">
               知识付费
             </button>
           </div>

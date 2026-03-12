@@ -82,7 +82,7 @@
           v-for="item in navItems"
           :key="item.path"
           :to="item.path"
-          class="flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all whitespace-nowrap"
+          class="flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all whitespace-nowrap btn-mobile"
           active-class="text-blue-600 bg-blue-50"
         >
           {{ item.label }}

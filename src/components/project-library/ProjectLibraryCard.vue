@@ -58,20 +58,20 @@
     <div class="flex flex-col md:flex-row gap-2">
       <button
         @click="$emit('action', 'generate', project)"
-        class="w-full md:flex-1 px-3 md:px-4 py-2 bg-blue-600 text-white text-xs md:text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full md:flex-1 px-3 md:px-4 py-2 bg-blue-600 text-white text-xs md:text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors btn-mobile"
       >
         一键自动生成项目
       </button>
       <div class="flex gap-2">
         <button
           @click="$emit('action', 'share', project)"
-          class="flex-1 md:flex-none px-3 md:px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
+          class="flex-1 md:flex-none px-3 md:px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors btn-mobile"
         >
           分享
         </button>
         <button
           @click="$emit('action', 'favorite', project)"
-          class="flex-1 md:flex-none px-3 md:px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
+          class="flex-1 md:flex-none px-3 md:px-4 py-2 bg-gray-100 text-gray-700 text-xs md:text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors btn-mobile"
         >
           收藏
         </button>
