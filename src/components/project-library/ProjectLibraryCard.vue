@@ -96,7 +96,7 @@ defineEmits<{
 
 // Computed
 const costLabel = computed(() => {
-  const cost = props.project.cost
+  const cost = props.project.cost ?? 0
   if (cost === 0) return '0成本'
   if (cost < 1000) return '千元级'
   if (cost < 10000) return '万元级'

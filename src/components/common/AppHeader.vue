@@ -94,7 +94,6 @@
 
 <script setup lang="ts">
 import type { NavItem } from '@/types'
-import ThemeToggle from './ThemeToggle.vue'
 
 const navItems: NavItem[] = [
   { label: 'AI创业机会库', path: '/projects' },

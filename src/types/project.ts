@@ -9,4 +9,5 @@ export interface Project {
   revenue: string
   coverImage: string
   description: string
+  cost?: number
 }
