@@ -1,10 +1,9 @@
 <template>
   <div class="min-h-screen flex">
     <!-- Left Side - Promotional Content (PC only) -->
-    <div class="hidden md:flex flex-1 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 relative overflow-hidden">
-      <!-- Decorative circles -->
-      <div class="absolute top-20 left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-20 right-20 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
+    <div class="hidden md:flex flex-1 relative overflow-hidden" style="background-image: url('/src/assets/images/login-bg.png'); background-size: cover; background-position: center;">
+      <!-- Overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/20"></div>
 
       <div class="relative z-10 flex flex-col justify-center px-16 text-white">
         <div class="space-y-8">
