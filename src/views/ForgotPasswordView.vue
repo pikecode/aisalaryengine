@@ -52,11 +52,11 @@
       </div>
     </div>
 
-    <!-- Right Side - Forgot Password Form -->
-    <div class="w-full md:w-[600px] flex-shrink-0 bg-white flex items-center justify-center px-8 py-12">
+    <!-- Right Side - Forgot Password Form (PC) / Full Screen (Mobile) -->
+    <div class="w-full md:w-[600px] flex-shrink-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 md:bg-white flex items-center justify-center px-4 md:px-8 py-8 md:py-12">
       <div class="w-full max-w-md">
-        <!-- Logo -->
-        <div class="text-center mb-8">
+        <!-- Logo (Mobile only) -->
+        <div class="text-center mb-8 md:hidden">
           <RouterLink to="/" class="inline-flex items-center gap-2 mb-2">
             <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold relative">
               <span>AI</span>
@@ -64,11 +64,20 @@
             </div>
             <span class="text-2xl font-bold text-gray-900">AI薪引擎</span>
           </RouterLink>
-          <p class="text-gray-600 text-sm mt-2">找回密码</p>
         </div>
 
         <!-- Forgot Password Card -->
-        <div class="bg-white rounded-2xl p-8">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg md:shadow-none">
+          <!-- PC Logo -->
+          <div class="hidden md:block text-center mb-6">
+            <RouterLink to="/" class="inline-flex items-center gap-2 mb-2">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold relative">
+                <span>AI</span>
+                <span class="absolute -top-1 -right-1 text-yellow-300 text-sm">✦</span>
+              </div>
+              <span class="text-2xl font-bold text-gray-900">AI薪引擎</span>
+            </RouterLink>
+          </div>
         <!-- Step Indicator -->
         <div class="flex items-center justify-center mb-8">
           <div class="flex items-center gap-2">
