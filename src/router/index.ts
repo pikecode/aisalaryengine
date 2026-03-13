@@ -27,6 +27,21 @@ const router = createRouter({
       path: '/membership',
       name: 'membership',
       component: () => import('@/views/Membership.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/LoginView.vue')
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('@/views/RegisterView.vue')
+    },
+    {
+      path: '/forgot-password',
+      name: 'forgot-password',
+      component: () => import('@/views/ForgotPasswordView.vue')
     }
   ],
   scrollBehavior() {

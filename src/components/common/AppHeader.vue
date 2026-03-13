@@ -66,12 +66,12 @@
         </button>
 
         <!-- Buttons -->
-        <button class="px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
+        <RouterLink to="/register" class="px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
           注册
-        </button>
-        <button class="px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+        </RouterLink>
+        <RouterLink to="/login" class="px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors">
           登录
-        </button>
+        </RouterLink>
       </div>
     </div>
 
