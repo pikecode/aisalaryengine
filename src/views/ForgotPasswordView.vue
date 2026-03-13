@@ -52,7 +52,7 @@
     </div>
 
     <!-- Right Side - Forgot Password Form (PC) / Full Screen (Mobile) -->
-    <div class="w-full md:w-[600px] flex-shrink-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 md:bg-white flex items-center justify-center px-4 md:px-8 py-8 md:py-12">
+    <div class="w-full md:w-[600px] flex-shrink-0 md:bg-white flex items-center justify-center px-4 md:px-8 py-8 md:py-12 mobile-login-bg">
       <div class="w-full max-w-md">
         <!-- Logo (Mobile only) -->
         <div class="text-center mb-8 md:hidden">
@@ -294,3 +294,17 @@ const startCountdown = () => {
   }, 1000)
 }
 </script>
+
+<style scoped>
+.mobile-login-bg {
+  background-image: url('/src/assets/images/mobile-login-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .mobile-login-bg {
+    background-image: none;
+  }
+}
+</style>
