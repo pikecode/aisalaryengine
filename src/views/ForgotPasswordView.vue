@@ -1,6 +1,35 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center px-4 py-8">
-    <div class="w-full max-w-md">
+    <div class="w-full max-w-6xl flex gap-8 items-center">
+      <!-- Left Side - Promotional Content (PC only) -->
+      <div class="hidden md:flex flex-1 flex-col justify-center">
+        <div class="space-y-6">
+          <h1 class="text-5xl font-bold text-gray-900 leading-tight">
+            AI薪引擎<br/>
+            抓住AI风口
+          </h1>
+          <p class="text-xl text-gray-600">
+            快速找回密码，继续你的AI创业之旅
+          </p>
+          <div class="flex gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>安全验证</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>快速找回</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Forgot Password Form -->
+      <div class="w-full md:w-[480px] flex-shrink-0">
       <!-- Logo -->
       <div class="text-center mb-8">
         <RouterLink to="/" class="inline-flex items-center gap-2 mb-2">
@@ -158,6 +187,7 @@
           <RouterLink to="/login" class="text-blue-600 hover:underline text-sm font-medium">
             返回登录
           </RouterLink>
+        </div>
         </div>
       </div>
     </div>
