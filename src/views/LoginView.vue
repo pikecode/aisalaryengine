@@ -54,21 +54,123 @@
     <!-- Right Side - Login Form (PC) / Full Screen (Mobile) -->
     <div class="w-full md:w-[600px] flex-shrink-0 md:bg-white flex items-center justify-center px-4 md:px-8 py-8 md:py-12 mobile-login-bg">
       <div class="w-full max-w-md">
-        <!-- Logo (Mobile only) -->
-        <div class="text-center mb-8 md:hidden">
-          <RouterLink to="/" class="inline-flex items-center gap-2 mb-2">
-            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold relative">
-              <span>AI</span>
-              <span class="absolute -top-1 -right-1 text-yellow-300 text-sm">✦</span>
+        <!-- Mobile Layout -->
+        <div class="md:hidden">
+          <!-- Status Bar Spacer -->
+          <div class="h-12"></div>
+
+          <!-- Logo and Title -->
+          <div class="text-center mb-8">
+            <RouterLink to="/" class="inline-flex items-center gap-2 mb-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold relative">
+                <span class="text-lg">AI</span>
+                <span class="absolute -top-1 -right-1 text-yellow-300 text-lg">✦</span>
+              </div>
+            </RouterLink>
+            <h1 class="text-2xl font-bold text-gray-900 mb-2">AI薪引擎</h1>
+            <p class="text-gray-600 text-sm">抓住AI风口，开启创业之旅</p>
+          </div>
+
+          <!-- Tab Switcher -->
+          <div class="flex gap-2 mb-8 bg-gray-100 p-1 rounded-xl">
+            <button
+              :class="['flex-1 py-3 rounded-lg text-sm font-medium transition-all',
+                loginType === 'password' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600']"
+              @click="loginType = 'password'"
+            >
+              密码登录
+            </button>
+            <button
+              :class="['flex-1 py-3 rounded-lg text-sm font-medium transition-all',
+                loginType === 'code' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600']"
+              @click="loginType = 'code'"
+            >
+              验证码登录
+            </button>
+          </div>
+
+          <!-- Login Form -->
+          <form @submit.prevent="handleLogin" class="space-y-6">
+            <!-- Account -->
+            <div>
+              <input
+                v-model="form.account"
+                type="text"
+                placeholder="请输入手机号"
+                class="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-base"
+                required
+              />
             </div>
-            <span class="text-2xl font-bold text-gray-900">AI薪引擎</span>
-          </RouterLink>
+
+            <!-- Password or Code -->
+            <div v-if="loginType === 'password'">
+              <div class="relative">
+                <input
+                  v-model="form.password"
+                  :type="showPassword ? 'text' : 'password'"
+                  placeholder="请输入密码"
+                  class="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-base"
+                  required
+                />
+                <button
+                  type="button"
+                  @click="showPassword = !showPassword"
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"
+                >
+                  <svg v-if="!showPassword" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div v-else class="flex gap-3">
+              <input
+                type="text"
+                placeholder="请输入验证码"
+                class="flex-1 px-4 py-4 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-base"
+              />
+              <button
+                type="button"
+                class="px-6 py-4 bg-blue-50 text-blue-600 rounded-xl font-medium whitespace-nowrap"
+              >
+                获取验证码
+              </button>
+            </div>
+
+            <!-- Forgot Password -->
+            <div class="text-right">
+              <RouterLink to="/forgot-password" class="text-sm text-blue-600">
+                忘记密码？
+              </RouterLink>
+            </div>
+
+            <!-- Login Button -->
+            <button
+              type="submit"
+              class="w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-xl text-lg shadow-lg"
+            >
+              登录
+            </button>
+          </form>
+
+          <!-- Register Link -->
+          <div class="text-center mt-8">
+            <span class="text-gray-600 text-sm">还没有账号？</span>
+            <RouterLink to="/register" class="text-blue-600 text-sm font-medium ml-1">
+              会员注册
+            </RouterLink>
+          </div>
         </div>
 
-        <!-- Login Form Card -->
-        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg md:shadow-none">
+        <!-- PC Layout -->
+        <div class="hidden md:block">
           <!-- PC Logo -->
-          <div class="hidden md:block text-center mb-6">
+          <div class="text-center mb-6">
             <RouterLink to="/" class="inline-flex items-center gap-2 mb-2">
               <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold relative">
                 <span>AI</span>
@@ -78,25 +180,7 @@
             </RouterLink>
           </div>
 
-          <!-- Tab Switcher (Mobile only) -->
-          <div class="flex gap-2 mb-6 md:hidden bg-gray-100 p-1 rounded-lg">
-            <button
-              :class="['flex-1 py-2 rounded-lg text-sm font-medium transition-all',
-                loginType === 'password' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600']"
-              @click="loginType = 'password'"
-            >
-              密码登录
-            </button>
-            <button
-              :class="['flex-1 py-2 rounded-lg text-sm font-medium transition-all',
-                loginType === 'code' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600']"
-              @click="loginType = 'code'"
-            >
-              验证码登录
-            </button>
-          </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mb-6 hidden md:block">登录账号</h2>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">登录账号</h2>
 
         <form @submit.prevent="handleLogin" class="space-y-4">
           <!-- Account -->
