@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto px-3 md:px-6 flex items-end justify-between pb-6" style="height: 104px;">
       <!-- Logo -->
       <RouterLink to="/" class="flex items-end gap-1.5 flex-shrink-0">
-        <img src="@/assets/logo.png" alt="AI薪引擎" class="w-[60px] h-[60px] flex-shrink-0" />
+        <img src="@/assets/logo.png" alt="AI薪引擎" class="w-[60px] h-[60px] flex-shrink-0 mb-[-8px]" />
         <span class="text-gray-900 whitespace-nowrap" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 26px; line-height: 24px;">AI薪引擎</span>
       </RouterLink>
 
