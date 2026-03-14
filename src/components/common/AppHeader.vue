@@ -5,7 +5,7 @@
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-1.5">
         <img src="@/assets/logo.png" alt="AI薪引擎" class="h-7 md:h-9 w-auto" />
-        <span class="text-gray-900" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 13px; line-height: 24px;">AI薪引擎</span>
+        <span class="text-gray-900" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 26px; line-height: 24px;">AI薪引擎</span>
       </RouterLink>
 
       <!-- PC Nav -->
