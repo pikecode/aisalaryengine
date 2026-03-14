@@ -26,7 +26,7 @@
       </nav>
 
       <!-- Right Actions -->
-      <div class="flex items-center gap-1.5 md:gap-3">
+      <div class="flex items-center gap-1 md:gap-3">
         <!-- 打卡按钮 - PC only -->
         <button class="hidden md:flex items-center gap-2 px-4 font-medium transition-all shadow-md whitespace-nowrap" style="background: linear-gradient(94.7deg, #1427FF 0%, #A114FF 96.2%); height: 40px; width: 117px; color: white; font-size: 20px; border-radius: 10px;">
           打卡
