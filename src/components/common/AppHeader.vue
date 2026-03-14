@@ -25,7 +25,7 @@
       <!-- Right Actions -->
       <div class="flex items-center gap-1.5 md:gap-3">
         <!-- 打卡按钮 - PC only -->
-        <button class="hidden md:flex items-center gap-2 px-4 rounded-lg font-medium transition-all shadow-md" style="background: linear-gradient(94.7deg, #1427FF 0%, #A114FF 96.2%); height: 20px; width: 65px; color: white; font-size: 10px;">
+        <button class="hidden md:flex items-center gap-2 px-4 rounded-lg font-medium transition-all shadow-md" style="background: linear-gradient(94.7deg, #1427FF 0%, #A114FF 96.2%); height: 20px; width: 70px; color: white; font-size: 10px;">
           打卡
           <img src="@/assets/checkin-icon.svg" alt="打卡" class="w-auto h-[25px]" />
         </button>
