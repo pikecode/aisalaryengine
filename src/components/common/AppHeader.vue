@@ -31,7 +31,7 @@
         </button>
 
         <!-- Language switcher -->
-        <div class="flex items-center bg-gray-100 rounded-lg overflow-hidden">
+        <div class="flex items-center bg-gray-100 overflow-hidden" style="border-radius: 8px;">
           <button class="flex items-center justify-center bg-gray-200 font-medium text-gray-900" style="width: 40px; height: 32px; font-size: 14px;">
             中
           </button>
