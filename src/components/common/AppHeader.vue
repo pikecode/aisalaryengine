@@ -3,9 +3,9 @@
     <!-- Top bar -->
     <div class="max-w-7xl mx-auto px-3 md:px-6 h-12 md:h-14 flex items-center justify-between">
       <!-- Logo -->
-      <RouterLink to="/" class="flex items-center gap-1.5 font-bold text-sm md:text-lg">
+      <RouterLink to="/" class="flex items-center gap-1.5">
         <img src="@/assets/logo.png" alt="AI薪引擎" class="h-7 md:h-9 w-auto" />
-        <span class="text-gray-900">AI薪引擎</span>
+        <span class="text-gray-900" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 26px; line-height: 24px;">AI薪引擎</span>
       </RouterLink>
 
       <!-- PC Nav -->
@@ -14,7 +14,8 @@
           v-for="item in navItems"
           :key="item.path"
           :to="item.path"
-          class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
+          class="px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
+          style="font-family: Roboto, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;"
           active-class="text-blue-600 bg-blue-50"
         >
           {{ item.label }}
@@ -24,7 +25,7 @@
       <!-- Right Actions -->
       <div class="flex items-center gap-1.5 md:gap-3">
         <!-- 打卡按钮 - PC only -->
-        <button class="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 transition-all shadow-md">
+        <button class="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-all shadow-md" style="background: linear-gradient(94.7deg, #1427FF 0%, #A114FF 96.2%);">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="8" r="3" fill="currentColor"/>
             <path d="M12 14c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z" fill="currentColor"/>
@@ -33,10 +34,10 @@
         </button>
 
         <!-- Language switcher -->
-        <div class="flex items-center bg-white rounded-lg px-2 py-1 text-xs md:text-sm font-medium gap-1 border border-gray-200">
-          <span class="text-gray-900">中</span>
-          <span class="text-gray-400">/</span>
-          <span class="text-gray-500">En</span>
+        <div class="flex items-center bg-white rounded-lg font-medium gap-1 border border-gray-200" style="width: 46px; height: 35px; padding: 6px 0; justify-content: center;">
+          <span class="text-gray-900 text-sm">中</span>
+          <span class="text-gray-400 text-sm">/</span>
+          <span class="text-gray-500 text-sm">En</span>
         </div>
 
         <!-- Search Icon -->
@@ -63,10 +64,10 @@
         </button>
 
         <!-- Buttons -->
-        <RouterLink to="/register" class="px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
+        <RouterLink to="/register" class="font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center" style="width: 66px; height: 36px; border-radius: 8px;">
           注册
         </RouterLink>
-        <RouterLink to="/login" class="px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+        <RouterLink to="/login" class="font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors flex items-center justify-center" style="width: 66px; height: 36px; border-radius: 8px;">
           登录
         </RouterLink>
       </div>
