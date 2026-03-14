@@ -1,15 +1,18 @@
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-    <!-- Top bar -->
-    <div class="max-w-7xl mx-auto px-3 md:px-6 flex items-end justify-between pb-6" style="height: 104px;">
+    <!-- Top spacer -->
+    <div style="height: 30px;"></div>
+
+    <!-- Main bar -->
+    <div class="max-w-7xl mx-auto px-3 md:px-6 flex items-center justify-between" style="height: 74px;">
       <!-- Logo -->
-      <RouterLink to="/" class="flex items-end gap-1.5 flex-shrink-0">
-        <img src="@/assets/logo.png" alt="AI薪引擎" class="w-[60px] h-[60px] flex-shrink-0 mb-[-8px]" />
+      <RouterLink to="/" class="flex items-center gap-1.5 flex-shrink-0">
+        <img src="@/assets/logo.png" alt="AI薪引擎" class="w-[60px] h-[60px] flex-shrink-0" />
         <span class="text-gray-900 whitespace-nowrap" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 26px; line-height: 24px;">AI薪引擎</span>
       </RouterLink>
 
       <!-- PC Nav -->
-      <nav class="hidden md:flex items-end gap-0.5">
+      <nav class="hidden md:flex items-center gap-0.5">
         <RouterLink
           v-for="item in navItems"
           :key="item.path"
@@ -23,7 +26,7 @@
       </nav>
 
       <!-- Right Actions -->
-      <div class="flex items-end gap-1.5 md:gap-3">
+      <div class="flex items-center gap-1.5 md:gap-3">
         <!-- 打卡按钮 - PC only -->
         <button class="hidden md:flex items-center gap-2 px-4 font-medium transition-all shadow-md whitespace-nowrap" style="background: linear-gradient(94.7deg, #1427FF 0%, #A114FF 96.2%); height: 40px; width: 117px; color: white; font-size: 20px; border-radius: 10px;">
           打卡
