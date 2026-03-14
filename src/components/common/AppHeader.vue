@@ -9,12 +9,12 @@
       </RouterLink>
 
       <!-- PC Nav -->
-      <nav class="hidden md:flex items-center gap-1">
+      <nav class="hidden md:flex items-center gap-0.5">
         <RouterLink
           v-for="item in navItems"
           :key="item.path"
           :to="item.path"
-          class="px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
+          class="px-2 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all whitespace-nowrap"
           style="font-family: Roboto, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px; text-align: center;"
           active-class="text-blue-600 bg-blue-50"
         >
