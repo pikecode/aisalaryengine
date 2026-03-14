@@ -5,7 +5,7 @@
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-1.5">
         <img src="@/assets/logo.png" alt="AI薪引擎" class="h-7 md:h-9 w-auto" />
-        <span class="text-gray-900" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 26px; line-height: 24px;">AI薪引擎</span>
+        <span class="text-gray-900" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 13px; line-height: 24px;">AI薪引擎</span>
       </RouterLink>
 
       <!-- PC Nav -->
@@ -15,7 +15,7 @@
           :key="item.path"
           :to="item.path"
           class="px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
-          style="font-family: Roboto, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px;"
+          style="font-family: Roboto, sans-serif; font-weight: 400; font-size: 12px; line-height: 24px;"
           active-class="text-blue-600 bg-blue-50"
         >
           {{ item.label }}
