@@ -32,9 +32,9 @@
 
         <!-- Language switcher -->
         <div class="flex items-center bg-white rounded-lg font-medium gap-1 border border-gray-200" style="width: 23px; height: 18px; padding: 6px 0; justify-content: center;">
-          <span class="text-gray-900 text-sm">中</span>
-          <span class="text-gray-400 text-sm">/</span>
-          <span class="text-gray-500 text-sm">En</span>
+          <span class="text-gray-900" style="font-size: 8px;">中</span>
+          <span class="text-gray-400" style="font-size: 8px;">/</span>
+          <span class="text-gray-500" style="font-size: 8px;">En</span>
         </div>
 
         <!-- Search Icon -->
