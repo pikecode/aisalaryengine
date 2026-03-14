@@ -78,7 +78,7 @@
 
     <!-- Mobile horizontal nav tabs -->
     <div class="md:hidden border-t border-gray-100 overflow-x-auto scrollbar-hide">
-      <div class="flex px-3 gap-1 py-2 min-w-max">
+      <div class="flex px-3 gap-1 py-3 min-w-max">
         <RouterLink
           v-for="item in navItems"
           :key="item.path"
