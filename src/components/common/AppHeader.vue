@@ -26,10 +26,7 @@
       <div class="flex items-center gap-1.5 md:gap-3">
         <!-- 打卡按钮 - PC only -->
         <button class="hidden md:flex items-center gap-2 px-4 rounded-lg font-medium transition-all shadow-md" style="background: linear-gradient(94.7deg, #1427FF 0%, #A114FF 96.2%); height: 20px; color: white; font-size: 10px;">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="8" r="3" fill="currentColor"/>
-            <path d="M12 14c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z" fill="currentColor"/>
-          </svg>
+          <img src="@/assets/checkin-icon.svg" alt="打卡" class="w-3 h-3" />
           打卡
         </button>
 
