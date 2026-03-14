@@ -31,10 +31,13 @@
         </button>
 
         <!-- Language switcher -->
-        <div class="flex items-center bg-white rounded-lg font-medium gap-1 border border-gray-200" style="width: 23px; height: 18px; padding: 6px 0; justify-content: center;">
-          <span class="text-gray-900" style="font-size: 8px;">中</span>
-          <span class="text-gray-400" style="font-size: 8px;">/</span>
-          <span class="text-gray-500" style="font-size: 8px;">En</span>
+        <div class="flex items-center gap-1">
+          <button class="flex items-center justify-center bg-gray-100 rounded font-medium text-gray-900" style="width: 32px; height: 32px; font-size: 14px;">
+            中
+          </button>
+          <button class="flex items-center justify-center bg-white rounded font-medium text-gray-600 hover:bg-gray-50" style="width: 32px; height: 32px; font-size: 14px;">
+            En
+          </button>
         </div>
 
         <!-- Search Icon -->
