@@ -32,10 +32,10 @@
 
         <!-- Language switcher -->
         <div class="flex items-center bg-gray-100 overflow-hidden" style="border-radius: 8px;">
-          <button class="flex items-center justify-center bg-white font-medium text-gray-900" style="width: 40px; height: 32px; font-size: 14px;">
+          <button class="flex items-center justify-center font-medium text-gray-900" style="width: 40px; height: 32px; font-size: 14px; background-color: #E7EBF2;">
             中
           </button>
-          <button class="flex items-center justify-center bg-gray-100 font-medium text-gray-900 hover:bg-gray-50" style="width: 40px; height: 32px; font-size: 14px;">
+          <button class="flex items-center justify-center bg-white font-medium text-gray-900 hover:bg-gray-50" style="width: 40px; height: 32px; font-size: 14px;">
             En
           </button>
         </div>
