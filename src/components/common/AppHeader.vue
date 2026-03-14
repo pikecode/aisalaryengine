@@ -15,7 +15,7 @@
           :key="item.path"
           :to="item.path"
           class="px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
-          style="font-family: Roboto, sans-serif; font-weight: 400; font-size: 12px; line-height: 24px;"
+          style="font-family: Roboto, sans-serif; font-weight: 400; font-size: 20px; line-height: 24px; text-align: center;"
           active-class="text-blue-600 bg-blue-50"
         >
           {{ item.label }}
