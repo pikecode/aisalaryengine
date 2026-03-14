@@ -1,7 +1,7 @@
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
     <!-- Top bar -->
-    <div class="max-w-7xl mx-auto px-3 md:px-6 flex items-center justify-between" style="height: 104px;">
+    <div class="max-w-7xl mx-auto px-3 md:px-6 flex items-end justify-between pb-4" style="height: 104px;">
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-1.5 flex-shrink-0">
         <img src="@/assets/logo.png" alt="AI薪引擎" class="w-[60px] h-[60px] flex-shrink-0" />
