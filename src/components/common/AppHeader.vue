@@ -4,10 +4,7 @@
     <div class="max-w-7xl mx-auto px-3 md:px-6 h-12 md:h-14 flex items-center justify-between">
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-1.5 font-bold text-sm md:text-lg">
-        <div class="w-7 h-7 md:w-9 md:h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-xs md:text-sm font-bold relative">
-          <span>AI</span>
-          <span class="absolute -top-0.5 -right-0.5 text-yellow-300 text-[10px]">✦</span>
-        </div>
+        <img src="@/assets/logo.png" alt="AI薪引擎" class="h-7 md:h-9 w-auto" />
         <span class="text-gray-900">AI薪引擎</span>
       </RouterLink>
 
