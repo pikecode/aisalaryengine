@@ -64,10 +64,10 @@
         </button>
 
         <!-- Buttons -->
-        <RouterLink to="/register" class="font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center" style="width: 66px; height: 36px; border-radius: 8px;">
+        <RouterLink to="/register" class="font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center" style="width: 33px; height: 18px; border-radius: 8px; font-size: 8px;">
           注册
         </RouterLink>
-        <RouterLink to="/login" class="font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors flex items-center justify-center" style="width: 66px; height: 36px; border-radius: 8px;">
+        <RouterLink to="/login" class="font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors flex items-center justify-center" style="width: 33px; height: 18px; border-radius: 8px; font-size: 8px;">
           登录
         </RouterLink>
       </div>
