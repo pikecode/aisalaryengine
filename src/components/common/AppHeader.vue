@@ -7,8 +7,8 @@
     <div class="max-w-7xl mx-auto px-3 md:px-6 flex items-center justify-between" style="height: 74px;">
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-1.5 flex-shrink-0">
-        <img src="@/assets/logo.png" alt="AI薪引擎" class="w-[60px] h-[60px] flex-shrink-0" />
-        <span class="text-gray-900 whitespace-nowrap" style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 26px; line-height: 24px;">AI薪引擎</span>
+        <img src="@/assets/logo.png" alt="AI薪引擎" class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] flex-shrink-0" />
+        <span class="text-gray-900 whitespace-nowrap text-base md:text-[26px]" style="font-family: Roboto, sans-serif; font-weight: 700; line-height: 24px;">AI薪引擎</span>
       </RouterLink>
 
       <!-- PC Nav -->
