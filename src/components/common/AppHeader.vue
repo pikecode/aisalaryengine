@@ -35,42 +35,42 @@
 
         <!-- Language switcher -->
         <div class="flex items-center bg-gray-100 overflow-hidden" style="border-radius: 8px;">
-          <button class="flex items-center justify-center font-medium text-gray-900" style="width: 40px; height: 32px; font-size: 14px; background-color: #E7EBF2;">
+          <button class="flex items-center justify-center font-medium text-gray-900 text-xs md:text-sm" style="width: 32px; height: 28px; background-color: #E7EBF2;">
             中
           </button>
-          <button class="flex items-center justify-center bg-white font-medium text-gray-900 hover:bg-gray-50" style="width: 40px; height: 32px; font-size: 14px;">
+          <button class="flex items-center justify-center bg-white font-medium text-gray-900 hover:bg-gray-50 text-xs md:text-sm" style="width: 32px; height: 28px;">
             En
           </button>
         </div>
 
         <!-- Search Icon -->
-        <button class="flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
-          <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="flex items-center justify-center w-7 h-7 md:w-9 md:h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+          <svg class="w-3.5 h-3.5 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </button>
 
         <!-- Notification Icon with Badge -->
-        <button class="relative flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
-          <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="relative flex items-center justify-center w-7 h-7 md:w-9 md:h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+          <svg class="w-3.5 h-3.5 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
-          <span class="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-red-500 text-white text-[10px] rounded-full flex items-center justify-center">2</span>
+          <span class="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 text-white text-[9px] rounded-full flex items-center justify-center">2</span>
         </button>
 
         <!-- Cart Icon with Badge -->
-        <button class="relative flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
-          <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        <button class="relative flex items-center justify-center w-7 h-7 md:w-9 md:h-9 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+          <svg class="w-3.5 h-3.5 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="roundoke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-          <span class="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-red-500 text-white text-[10px] rounded-full flex items-center justify-center">2</span>
+          <span class="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 text-white text-[9px] rounded-full flex items-center justify-center">2</span>
         </button>
 
         <!-- Buttons -->
-        <RouterLink to="/register" class="font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center" style="width: 66px; height: 36px; border-radius: 8px; font-size: 14px;">
+        <RouterLink to="/register" class="font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center text-xs md:text-sm" style="width: 54px; height: 30px; border-rx;">
           注册
         </RouterLink>
-        <RouterLink to="/login" class="font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors flex items-center justify-center" style="width: 66px; height: 36px; border-radius: 8px; font-size: 14px;">
+        <RouterLink to="/login" class="font-medium text-white bg-gray-900 hover:bg-gray-800 transition-colors flex items-center justify-center text-xs md:text-sm" style="width: 54px; height: 30px; border-radius: 6px;">
           登录
         </RouterLink>
       </div>
