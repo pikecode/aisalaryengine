@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader />
-    <main>
+    <main class="pt-[104px]">
       <HeroSection />
       <ProjectGrid />
       <ValuePillars />
