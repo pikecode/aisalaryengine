@@ -208,11 +208,12 @@ const handleCart = () => {
   font-family: Roboto, sans-serif;
   font-size: 20px;
   line-height: 24px;
-  text-align: left;
+  text-align: center;
   width: 124px;
   height: 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-link:hover {
