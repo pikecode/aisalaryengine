@@ -1,7 +1,7 @@
 <template>
   <section class="hero-section">
     <div class="relative max-w-6xl mx-auto px-4 md:px-6 w-full">
-      <div class="text-left">
+      <div class="text-center">
 
         <!-- Small Title -->
         <p class="hero-subtitle">
@@ -159,8 +159,8 @@ const searchQuery = ref('')
   font-size: 32px;
   color: #333333;
   line-height: 24px;
-  text-align: left;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin: 0 auto 1rem;
 }
 
 @media (min-width: 768px) {
