@@ -180,11 +180,13 @@ const handleCart = () => {
   line-height: 24px;
   font-size: 0.875rem;
   text-align: left;
+  width: 104px;
+  height: 24px;
 }
 
 @media (min-width: 768px) {
   .brand-text {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 
@@ -209,9 +211,11 @@ const handleCart = () => {
   transition: all 0.2s;
   white-space: nowrap;
   font-family: Roboto, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   text-align: center;
+  width: 124px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
