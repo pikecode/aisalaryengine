@@ -1,10 +1,10 @@
 <template>
   <section class="hero-section">
     <div class="relative max-w-6xl mx-auto px-4 md:px-6 w-full">
-      <div class="text-center">
+      <div class="text-left">
 
         <!-- Small Title -->
-        <p class="text-base md:text-lg text-gray-600 mb-4">
+        <p class="hero-subtitle">
           无论是创业还是副业，我们帮你迈出第一步
         </p>
 
@@ -143,12 +143,24 @@ const searchQuery = ref('')
   position: relative;
   overflow: hidden;
   margin-top: -104px;
-  padding-top: 120px;
+  padding-top: 206px;
   padding-bottom: 4rem;
   background-image: url('/src/assets/hero-bg.png');
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
+}
+
+.hero-subtitle {
+  width: 617px;
+  height: 61px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: #333333;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
