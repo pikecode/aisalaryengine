@@ -201,14 +201,18 @@ const handleCart = () => {
 .nav-link {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  font-weight: 500;
-  color: #4b5563;
+  font-weight: 400;
+  color: #393939;
   transition: all 0.2s;
   white-space: nowrap;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
+  width: 124px;
+  height: 24px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:hover {
