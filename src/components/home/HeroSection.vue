@@ -146,8 +146,8 @@ const searchQuery = ref('')
   padding-top: 120px;
   padding-bottom: 4rem;
   background-image: url('/src/assets/hero-bg.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
