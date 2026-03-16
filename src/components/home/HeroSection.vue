@@ -143,7 +143,7 @@ const searchQuery = ref('')
   position: relative;
   overflow: hidden;
   margin-top: -104px;
-  padding-top: 206px;
+  padding-top: 204px;
   padding-bottom: 4rem;
   background-image: url('/src/assets/hero-bg.png');
   background-size: contain;
