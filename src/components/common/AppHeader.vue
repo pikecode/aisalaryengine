@@ -124,9 +124,10 @@ const handleCart = () => {
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: #EDEFF4;
+  background-color: rgba(237, 239, 244, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #e5e7eb;
+  height: 104px;
 }
 
 .header-spacer {
