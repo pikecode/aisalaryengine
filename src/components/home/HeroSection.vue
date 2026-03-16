@@ -134,6 +134,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import heroBg from '@/assets/hero-bg.png'
 
 const searchQuery = ref('')
 </script>
@@ -144,7 +145,7 @@ const searchQuery = ref('')
   overflow: hidden;
   padding-top: 2rem;
   padding-bottom: 4rem;
-  background-image: url('@/assets/hero-bg.png');
+  background-image: v-bind('`url(${heroBg})`');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
