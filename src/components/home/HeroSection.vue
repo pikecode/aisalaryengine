@@ -142,7 +142,8 @@ const searchQuery = ref('')
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding-top: 2rem;
+  margin-top: -104px;
+  padding-top: 120px;
   padding-bottom: 4rem;
   background-image: url('/src/assets/hero-bg.png');
   background-size: cover;
@@ -152,7 +153,7 @@ const searchQuery = ref('')
 
 @media (min-width: 768px) {
   .hero-section {
-    padding-top: 3rem;
+    padding-top: 130px;
   }
 }
 </style>
