@@ -1,29 +1,5 @@
 <template>
-  <section class="relative overflow-hidden pt-24 md:pt-20 pb-16 bg-gradient-to-br from-blue-100 via-purple-50 to-white">
-    <!-- Background decoration -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <!-- Flowing curves decoration -->
-      <div class="absolute top-0 left-0 w-full h-full">
-        <svg class="absolute top-0 left-0 w-full h-full opacity-40" viewBox="0 0 1440 800" preserveAspectRatio="none">
-          <path d="M0,200 Q360,100 720,200 T1440,200 L1440,0 L0,0 Z" fill="url(#gradient1)" />
-          <path d="M0,400 Q360,300 720,400 T1440,400 L1440,0 L0,0 Z" fill="url(#gradient2)" />
-          <defs>
-            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:rgb(59, 130, 246);stop-opacity:0.3" />
-              <stop offset="100%" style="stop-color:rgb(147, 51, 234);stop-opacity:0.1" />
-            </linearGradient>
-            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:rgb(96, 165, 250);stop-opacity:0.2" />
-              <stop offset="100%" style="stop-color:rgb(168, 85, 247);stop-opacity:0.1" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <!-- Right side geometric decoration -->
-      <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-200/20 to-transparent"></div>
-      <div class="absolute top-20 right-20 w-64 h-64 bg-blue-400/10 rounded-lg rotate-12 blur-2xl"></div>
-    </div>
-
+  <section class="relative overflow-hidden pt-24 md:pt-20 pb-16" style="background-image: url('@/assets/hero-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="relative max-w-6xl mx-auto px-4 md:px-6 w-full">
       <div class="text-center">
 
