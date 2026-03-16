@@ -251,9 +251,9 @@ const handleCart = () => {
   padding: 0 1rem;
   font-weight: 500;
   transition: all 0.2s;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
-  background: linear-gradient(94.7deg, #1427FF 0%, #A114FF 96.2%);
+  background: linear-gradient(85deg, #1427FF 0%, #A114FF 100%);
+  box-shadow: 0px 0px 8px 0px rgba(34, 37, 255, 0.29);
   height: 40px;
   width: 117px;
   color: white;
