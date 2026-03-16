@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: #F6F7FA;">
     <AppHeader />
     <main class="pt-[104px]">
       <HeroSection />
