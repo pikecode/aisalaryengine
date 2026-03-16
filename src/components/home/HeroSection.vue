@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden pt-24 md:pt-20 pb-16" style="background-image: url('@/assets/hero-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <section class="hero-section">
     <div class="relative max-w-6xl mx-auto px-4 md:px-6 w-full">
       <div class="text-center">
 
@@ -137,3 +137,22 @@ import { ref } from 'vue'
 
 const searchQuery = ref('')
 </script>
+
+<style scoped>
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background-image: url('@/assets/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 5rem;
+  }
+}
+</style>
