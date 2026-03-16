@@ -155,20 +155,20 @@ const handleCart = () => {
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 0.375rem;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
 .logo-image {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
   .logo-image {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -178,15 +178,13 @@ const handleCart = () => {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   line-height: 24px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-align: left;
-  width: 104px;
-  height: 24px;
 }
 
 @media (min-width: 768px) {
   .brand-text {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 
@@ -194,7 +192,7 @@ const handleCart = () => {
 .nav-desktop {
   display: none;
   align-items: center;
-  gap: 0.125rem;
+  gap: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -204,18 +202,16 @@ const handleCart = () => {
 }
 
 .nav-link {
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   font-weight: 400;
   color: #393939;
   transition: all 0.2s;
   white-space: nowrap;
   font-family: Roboto, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   text-align: center;
-  width: 124px;
-  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,12 +231,12 @@ const handleCart = () => {
 .actions-container {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 @media (min-width: 768px) {
   .actions-container {
-    gap: 0.75rem;
+    gap: 1rem;
   }
 }
 
