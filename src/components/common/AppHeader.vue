@@ -171,12 +171,15 @@ const handleCart = () => {
 }
 
 .brand-text {
-  color: #111827;
+  color: #393939;
   white-space: nowrap;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   line-height: 24px;
   font-size: 1rem;
+  text-align: left;
+  width: 104px;
+  height: 24px;
 }
 
 @media (min-width: 768px) {
