@@ -146,7 +146,8 @@ const handleCart = () => {
 
 @media (min-width: 768px) {
   .header-main {
-    padding: 0 1.5rem;
+    padding-left: 120px;
+    padding-right: 175px;
   }
 }
 
