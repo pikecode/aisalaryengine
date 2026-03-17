@@ -14,10 +14,8 @@
             v-for="tab in tabs"
             :key="tab"
             @click="activeTab = tab"
-            class="px-6 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap"
-            :class="activeTab === tab
-              ? 'bg-gray-800 text-white'
-              : 'bg-white text-gray-600 hover:bg-gray-100'"
+            class="filter-tab"
+            :class="activeTab === tab ? 'filter-tab-active' : 'filter-tab-inactive'"
           >
             {{ tab }}
           </button>
@@ -25,16 +23,14 @@
       </div>
 
       <!-- Leaderboard Banner -->
-      <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl px-6 py-4 mb-8 flex items-center justify-between max-w-4xl mx-auto border border-blue-100">
-        <div class="flex items-center gap-3 text-base">
-          <div class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
-            1
-          </div>
-          <span class="text-gray-700 font-medium">张丽丽</span>
-          <span class="text-gray-600">在xxxxx项目中</span>
-          <span class="text-blue-600 font-semibold">赚了50万</span>
+      <div class="leaderboard-banner">
+        <div class="leaderboard-content">
+          <div class="leaderboard-rank">1</div>
+          <span class="leaderboard-name">张丽丽</span>
+          <span class="leaderboard-project">在xxxxx项目中</span>
+          <span class="leaderboard-earning">赚了50万</span>
         </div>
-        <div class="flex flex-col gap-0.5 flex-shrink-0">
+        <div class="leaderboard-arrows">
           <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
           </svg>
@@ -120,5 +116,88 @@ const tabs = ['启动资金', '时间投入', '技术门槛']
   line-height: 24px;
   text-align: center;
   margin: 0 auto;
+}
+
+.filter-tab {
+  width: 110px;
+  height: 42px;
+  border-radius: 8px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.filter-tab-active {
+  background: #393939;
+  color: #FFFFFF;
+}
+
+.filter-tab-inactive {
+  background: white;
+  color: #666666;
+}
+
+.filter-tab-inactive:hover {
+  background: #f5f5f5;
+}
+
+.leaderboard-banner {
+  background: linear-gradient(90deg, #E6F4FF 0%, #F0E6FF 100%);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin: 0 auto 32px;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #D6E9FF;
+}
+
+.leaderboard-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.leaderboard-rank {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1890FF;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.leaderboard-name {
+  color: #333333;
+}
+
+.leaderboard-project {
+  color: #666666;
+}
+
+.leaderboard-earning {
+  color: #1427FF;
+  font-weight: 600;
+}
+
+.leaderboard-arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
 }
 </style>
