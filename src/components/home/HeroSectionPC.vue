@@ -1,30 +1,30 @@
 <template>
   <section class="hero-section-pc">
-    <div class="relative mx-auto px-4 md:px-6 w-full">
-      <div class="text-center max-w-6xl mx-auto">
+    <div class="relative mx-auto px-4 md:px-6 lg:px-8 w-full">
+      <div class="text-center max-w-7xl mx-auto">
 
         <!-- Small Title -->
-        <p class="hero-subtitle">
+        <p class="w-full max-w-2xl mx-auto hero-subtitle">
           无论是创业还是副业，我们帮你迈出第一步
         </p>
 
         <!-- Main Title -->
-        <h1 class="hero-title">
+        <h1 class="w-full max-w-3xl mx-auto hero-title">
           AI薪引擎-抓住AI风口
         </h1>
 
         <!-- CTA Buttons -->
         <div class="flex flex-row gap-4 justify-center mb-12">
-          <button class="cta-button cta-button-primary">
+          <button class="w-auto min-w-[272px] cta-button cta-button-primary">
             成为签约创客
           </button>
-          <button class="cta-button cta-button-secondary">
+          <button class="w-auto min-w-[272px] cta-button cta-button-secondary">
             创造我的项目
           </button>
         </div>
 
         <!-- Search Card -->
-        <div class="search-card">
+        <div class="w-full max-w-5xl mx-auto search-card">
           <!-- Quick Search Title -->
           <div class="flex items-center gap-2 mb-5">
             <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
@@ -67,17 +67,17 @@
 
         <!-- Filter Pills -->
         <div class="flex flex-wrap gap-4 justify-center mb-10">
-          <button class="filter-pill filter-pill-yellow">
+          <button class="w-auto px-6 filter-pill filter-pill-yellow">
             <img src="@/assets/low.png" alt="" class="filter-icon-img" />
             <span class="filter-text">低于1000元</span>
             <img src="@/assets/arrow.png" alt="" class="filter-arrow-img" />
           </button>
-          <button class="filter-pill filter-pill-blue">
+          <button class="w-auto px-6 filter-pill filter-pill-blue">
             <img src="@/assets/time.png" alt="" class="filter-icon-img" />
             <span class="filter-text">副业/碎片时间</span>
             <img src="@/assets/arrow.png" alt="" class="filter-arrow-img" />
           </button>
-          <button class="filter-pill filter-pill-green">
+          <button class="w-auto px-6 filter-pill filter-pill-green">
             <img src="@/assets/code.png" alt="" class="filter-icon-img" />
             <span class="filter-text">无代码</span>
             <img src="@/assets/arrow.png" alt="" class="filter-arrow-img" />
@@ -87,7 +87,7 @@
       </div>
 
       <!-- Stats Cards -->
-      <div class="stats-card">
+      <div class="w-full max-w-7xl mx-auto stats-card">
         <div class="grid grid-cols-3 gap-8 divide-x divide-gray-200">
           <div class="flex items-center gap-4">
             <img src="@/assets/1.png" alt="" class="stat-icon" />
@@ -139,38 +139,38 @@ const searchQuery = ref('')
 }
 
 .hero-subtitle {
-  width: 617px;
   font-family: 'PingFang SC', sans-serif;
   font-weight: bold;
-  font-size: 32px;
+  font-size: clamp(24px, 4vw, 32px);
   color: #333333;
   line-height: 1.5;
   text-align: center;
   margin: 0 auto 30px;
+  padding: 0 1rem;
 }
 
 .hero-title {
-  width: 777px;
   font-family: 'MiSans', sans-serif;
   font-weight: 800;
-  font-size: 80px;
+  font-size: clamp(48px, 8vw, 80px);
   color: #333333;
   line-height: 1.2;
-  text-align: left;
+  text-align: center;
   margin: 0 auto 30px;
+  padding: 0 1rem;
 }
 
 .cta-button {
-  width: 272px;
   height: 72px;
   border-radius: 100px;
   border: 1px solid #393939;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 28px;
+  font-size: clamp(20px, 3vw, 28px);
   line-height: 38px;
   text-align: center;
   transition: all 0.3s;
+  padding: 0 2rem;
 }
 
 .cta-button-primary {
@@ -192,8 +192,6 @@ const searchQuery = ref('')
 }
 
 .search-card {
-  width: 1197px;
-  height: 242px;
   background: #FFFFFF;
   box-shadow: 0px 4px 38px 0px rgba(0, 117, 192, 0.33);
   border-radius: 30px;
@@ -202,8 +200,6 @@ const searchQuery = ref('')
 }
 
 .quick-search-title {
-  width: 80px;
-  height: 20px;
   font-family: 'PingFang SC', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -243,7 +239,7 @@ const searchQuery = ref('')
 }
 
 .search-button {
-  width: 160px;
+  width: clamp(120px, 20%, 160px);
   height: 56px;
   background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
   border-radius: 12px;
@@ -262,8 +258,6 @@ const searchQuery = ref('')
 }
 
 .hot-label {
-  width: 60px;
-  height: 20px;
   font-family: 'PingFang SC', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -281,6 +275,7 @@ const searchQuery = ref('')
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .filter-pill {
@@ -292,6 +287,7 @@ const searchQuery = ref('')
   border: 1px solid;
   cursor: pointer;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .filter-icon-img {
@@ -316,7 +312,6 @@ const searchQuery = ref('')
 }
 
 .filter-pill-yellow {
-  width: 205px;
   height: 52px;
   background: #FFFFFF;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
@@ -330,7 +325,6 @@ const searchQuery = ref('')
 }
 
 .filter-pill-blue {
-  width: 225px;
   height: 52px;
   background: #FFFFFF;
   box-shadow: 0px 0px 8px 0px rgba(20, 39, 255, 0.5);
@@ -345,7 +339,6 @@ const searchQuery = ref('')
 }
 
 .filter-pill-green {
-  width: 180px;
   height: 52px;
   background: #FFFFFF;
   box-shadow: 0px 0px 11px 0px rgba(0, 197, 89, 0.5);
@@ -360,8 +353,6 @@ const searchQuery = ref('')
 }
 
 .stats-card {
-  width: 1504px;
-  height: 167px;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 2px 69px 0px rgba(0, 0, 0, 0.03);
   border-radius: 20px;
@@ -378,22 +369,18 @@ const searchQuery = ref('')
 }
 
 .stat-number {
-  width: 126px;
-  height: 40px;
   font-family: 'DIN', sans-serif;
   font-weight: bold;
-  font-size: 42px;
+  font-size: clamp(32px, 5vw, 42px);
   color: #000000;
   line-height: 30px;
   text-align: left;
 }
 
 .stat-label {
-  width: 265px;
-  height: 33px;
   font-family: 'PingFang SC', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
   color: rgba(0, 0, 0, 0.6);
   line-height: 30px;
   text-align: left;

@@ -24,148 +24,19 @@
               v-for="(pillar, index) in pillars"
               :key="pillar.title"
             >
-              <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-2xl p-6 flex flex-col group cursor-pointer hover:shadow-lg transition-all duration-300 h-full">
-              <!-- Illustration Area -->
-              <div class="w-full h-32 mb-4 rounded-xl bg-white/80 backdrop-blur-sm flex items-center justify-center overflow-hidden relative">
-                <div v-if="index === 0" class="absolute left-3 w-16 h-16 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 rounded-lg transform -rotate-12"></div>
-                <div v-if="index === 0" class="absolute right-4 flex flex-col gap-1.5">
-                  <div class="w-12 h-1.5 bg-blue-200 rounded"></div>
-                  <div class="w-10 h-1.5 bg-blue-200 rounded"></div>
-                  <div class="flex gap-1 mt-1">
-                    <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                    <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                    <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                    <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                  </div>
-                </div>
-
-                <div v-if="index === 1" class="flex flex-col gap-1.5 w-full px-4">
-                  <div class="flex gap-2">
-                    <div class="w-10 h-1.5 bg-blue-200 rounded"></div>
-                    <div class="w-6 h-1.5 bg-blue-200 rounded"></div>
-                  </div>
-                  <div class="w-12 h-2 bg-blue-400 rounded"></div>
-                  <div class="flex gap-2 mt-1">
-                    <div class="w-8 h-1.5 bg-blue-200 rounded"></div>
-                    <div class="w-5 h-1.5 bg-blue-200 rounded"></div>
-                  </div>
-                  <div class="flex gap-2">
-                    <div class="w-6 h-1.5 bg-blue-200 rounded"></div>
-                    <div class="w-10 h-1.5 bg-blue-300 rounded"></div>
-                  </div>
-                </div>
-
-                <div v-if="index === 2" class="relative w-full h-full flex items-center justify-center">
-                  <div class="absolute top-3 left-4 w-8 h-8 bg-blue-200 rounded-full"></div>
-                  <div class="absolute top-4 right-6 bg-blue-100 rounded-xl px-3 py-1.5 w-24">
-                    <div class="w-full h-1.5 bg-blue-300 rounded mb-1"></div>
-                    <div class="w-16 h-1.5 bg-blue-200 rounded"></div>
-                  </div>
-                </div>
-
-                <div v-if="index === 3" class="relative w-full h-full flex items-center justify-center">
-                  <div class="absolute top-3 right-4 w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
-                    </svg>
-                  </div>
-                  <div class="absolute bottom-4 left-4 bg-blue-50 rounded-xl px-3 py-2 w-28 border border-blue-200">
-                    <div class="w-full h-1.5 bg-blue-300 rounded mb-1.5"></div>
-                    <div class="w-20 h-1.5 bg-blue-200 rounded"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Content -->
-              <div class="flex-1 mb-3">
-                <h3 class="text-lg font-bold text-gray-900 mb-2">{{ pillar.title }}</h3>
-                <p class="text-xs text-gray-600 leading-relaxed">{{ pillar.desc }}</p>
-              </div>
-
-              <!-- Learn More Link -->
-              <div class="flex items-center justify-end gap-2 text-gray-600 text-xs font-medium group-hover:text-blue-600 transition-colors">
-                <span>了解更多</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-              </div>
+              <PillarCard :pillar="pillar" :index="index" />
             </swiper-slide>
           </swiper>
         </div>
 
         <!-- Desktop: Grid -->
         <div class="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
-          <div
+          <PillarCard
             v-for="(pillar, index) in pillars"
             :key="pillar.title"
-            class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-3xl p-8 flex flex-col group cursor-pointer hover:shadow-lg transition-all duration-300"
-          >
-            <!-- Illustration Area -->
-            <div class="w-full h-40 mb-6 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center overflow-hidden relative">
-              <div v-if="index === 0" class="absolute left-4 w-20 h-20 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 rounded-lg transform -rotate-12"></div>
-              <div v-if="index === 0" class="absolute right-6 flex flex-col gap-2">
-                <div class="w-16 h-2 bg-blue-200 rounded"></div>
-                <div class="w-12 h-2 bg-blue-200 rounded"></div>
-                <div class="flex gap-1 mt-2">
-                  <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <div class="w-2 h-2 bg-blue-300 rounded-full"></div>
-                  <div class="w-2 h-2 bg-blue-300 rounded-full"></div>
-                  <div class="w-2 h-2 bg-blue-300 rounded-full"></div>
-                </div>
-              </div>
-
-              <div v-if="index === 1" class="flex flex-col gap-2 w-full px-6">
-                <div class="flex gap-2">
-                  <div class="w-12 h-2 bg-blue-200 rounded"></div>
-                  <div class="w-8 h-2 bg-blue-200 rounded"></div>
-                </div>
-                <div class="w-16 h-3 bg-blue-400 rounded"></div>
-                <div class="flex gap-2 mt-2">
-                  <div class="w-10 h-2 bg-blue-200 rounded"></div>
-                  <div class="w-6 h-2 bg-blue-200 rounded"></div>
-                </div>
-                <div class="flex gap-2">
-                  <div class="w-8 h-2 bg-blue-200 rounded"></div>
-                  <div class="w-12 h-2 bg-blue-300 rounded"></div>
-                </div>
-              </div>
-
-              <div v-if="index === 2" class="relative w-full h-full flex items-center justify-center">
-                <div class="absolute top-4 left-6 w-10 h-10 bg-blue-200 rounded-full"></div>
-                <div class="absolute top-6 right-8 bg-blue-100 rounded-2xl px-4 py-2 w-32">
-                  <div class="w-full h-2 bg-blue-300 rounded mb-1"></div>
-                  <div class="w-20 h-2 bg-blue-200 rounded"></div>
-                </div>
-              </div>
-
-              <div v-if="index === 3" class="relative w-full h-full flex items-center justify-center">
-                <div class="absolute top-4 right-6 w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center">
-                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
-                  </svg>
-                </div>
-                <div class="absolute bottom-6 left-6 bg-blue-50 rounded-2xl px-4 py-3 w-36 border border-blue-200">
-                  <div class="w-full h-2 bg-blue-300 rounded mb-2"></div>
-                  <div class="w-24 h-2 bg-blue-200 rounded"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Content -->
-            <div class="flex-1 mb-4">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">{{ pillar.title }}</h3>
-              <p class="text-sm text-gray-600 leading-relaxed">{{ pillar.desc }}</p>
-            </div>
-
-            <!-- Learn More Link -->
-            <div class="flex items-center justify-end gap-2 text-gray-600 text-sm font-medium group-hover:text-blue-600 transition-colors">
-              <span>了解更多</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </div>
+            :pillar="pillar"
+            :index="index"
+          />
         </div>
       </div>
 
@@ -205,7 +76,7 @@
 
             <!-- Floating amounts with different sizes and positions -->
             <!-- Large prominent amounts -->
-            <div class="absolute top-16 left-6 bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-xl transform hover:scale-105 transition-transform">
+            <div class="absolute top-16 left-6 bg-white/90 backdropnded-2xl px-6 py-4 shadow-xl transform hover:scale-105 transition-transform">
               <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">¥ 50,000</div>
             </div>
 
@@ -213,7 +84,7 @@
               <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">¥ 120,000</div>
             </div>
 
-            <!-- Medium amounts -->
+            <!-- amounts -->
             <div class="absolute bottom-24 left-8 text-2xl md:text-3xl font-bold text-yellow-500/80">
               ¥ 28,000
             </div>
@@ -246,6 +117,7 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
+import PillarCard from './PillarCard.vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -260,7 +132,7 @@ const pillars = [
   {
     title: 'AI工作台',
     desc: '智能化项目生成工具，帮助你快速启动创业项目',
-    icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 0 016 0z'
+    icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 0 016 0z'
   },
   {
     title: 'Pro社区',
