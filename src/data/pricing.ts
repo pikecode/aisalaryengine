@@ -1,50 +1,63 @@
 import type { PricingPlan } from '@/types/pricing'
 
-export const mockPlans: PricingPlan[] = [
+export const plans: PricingPlan[] = [
   {
     id: 'free',
     name: '免费版',
     price: 0,
-    period: '/永久',
+    periodLabel: '永久免费',
     features: [
-      '浏览10个创业项目',
-      '基础社区访问',
-      '每月3次AI工作台使用',
-      '公开案例查看'
+      '浏览所有项目模版',
+      '社区只读权限',
+      '基础AI对话(每日10次)',
     ],
-    ctaText: '免费开始',
-    isPopular: false
+    disabledFeatures: [
+      '项目模版详细内容',
+      'AI项目工作台',
+      '社区发帖权限',
+    ],
+    ctaText: '了解详情',
+    ctaStyle: 'outline',
+    bg: '#FFFFFF',
   },
   {
     id: 'pro',
     name: 'Pro会员版',
     price: 99,
-    originalPrice: 888,
-    period: '/月',
+    periodLabel: '年付¥888（立省¥300）',
     features: [
-      '解锁全部200+项目',
-      'AI工作台无限使用',
-      'Pro社区专属频道',
-      '每月新增项目优先体验',
-      '1对1导师答疑（每月2次）'
+      '免费版全部功能',
+      '解锁所有项目模版详情',
+      'AI项目工作台（无限项目）',
+      '社区发帖与互动',
+      'AI对话（每日100次）',
+      '上传项目（最多10个）',
+      '赠送300孵化点',
     ],
     ctaText: '立即升级',
-    isPopular: true
+    ctaStyle: 'solid',
+    bg: 'linear-gradient(39deg, #FFF6E4 0%, #E3E7FF 100%)',
+    border: '2px solid #E9E9E9',
+    isPopular: true,
   },
   {
     id: 'lifetime',
     name: '终身会员',
     price: 99,
-    originalPrice: 888,
-    period: '/年付',
+    priceColor: '#c2410c',
+    periodLabel: '年付¥888（立省¥300）',
     features: [
-      '包含Pro所有权益',
-      '终身免费更新',
-      '专属创客社群',
-      '线下活动优先名额',
-      '联合创始人徽章'
+      '免费版全部功能',
+      '解锁所有项目模版详情',
+      'AI项目工作台（无限项目）',
+      '社区发帖与互动',
+      'AI对话（每日100次）',
+      '上传项目（最多10个）',
+      '赠送300孵化点',
     ],
-    ctaText: '一次买断',
-    isPopular: false
-  }
+    ctaText: '立即升级',
+    ctaStyle: 'solid',
+    bg: 'linear-gradient(39deg, #FFF6E4 0%, #FFEEE3 100%)',
+    border: '2px solid #E9E9E9',
+  },
 ]

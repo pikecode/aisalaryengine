@@ -2,9 +2,13 @@ export interface PricingPlan {
   id: string
   name: string
   price: number
-  originalPrice?: number
-  period: string
+  priceColor?: string
+  periodLabel: string
   features: string[]
-  isPopular?: boolean
+  disabledFeatures?: string[]
   ctaText: string
+  ctaStyle: 'outline' | 'solid'
+  bg: string
+  border?: string
+  isPopular?: boolean
 }
