@@ -4,7 +4,7 @@
 
       <!-- Title -->
       <div class="text-center mb-8 md:mb-12">
-        <h2 class="text-2xl md:text-4xl font-bold text-gray-900">四大价值支柱</h2>
+        <h2 class="text-[18px] leading-3 md:text-[50px] md:leading-6 font-bold text-gray-900">三大价值支柱</h2>
       </div>
 
       <!-- Cards Grid -->
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Desktop: Grid -->
-        <div class="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="hidden md:grid grid-cols-3 gap-6">
           <PillarCard
             v-for="(pillar, index) in pillars"
             :key="pillar.title"
@@ -41,8 +41,8 @@
       </div>
 
       <!-- Promo Section -->
-      <div class="bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-2xl md:rounded-3xl shadow-xl p-6 md:p-12 overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div class="bg-white border-2 border-dashed border-gray-300 rounded-2xl md:rounded-3xl shadow-xl p-6 md:p-12 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 md:gap-12 items-center">
 
           <!-- Left: Text Content -->
           <div class="relative z-10">
@@ -76,7 +76,7 @@
 
             <!-- Floating amounts with different sizes and positions -->
             <!-- Large prominent amounts -->
-            <div class="absolute top-16 left-6 bg-white/90 backdropnded-2xl px-6 py-4 shadow-xl transform hover:scale-105 transition-transform">
+            <div class="absolute top-16 left-6 bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-xl transform hover:scale-105 transition-transform">
               <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">¥ 50,000</div>
             </div>
 
@@ -138,11 +138,6 @@ const pillars = [
     title: 'Pro社区',
     desc: '与5000+创客交流经验，获取一手创业资讯和实战技巧',
     icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
-  },
-  {
-    title: '用户共创与交易',
-    desc: '发布你的项目到创客市场，平台担保交易，坐享收益',
-    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 0 0118 0z'
   }
 ]
 </script>
