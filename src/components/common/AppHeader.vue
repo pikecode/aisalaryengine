@@ -137,7 +137,7 @@ const handleCart = () => {
 .header-main {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 0.75rem;
+  padding: 0 1rem;
   height: 74px;
   display: flex;
   align-items: center;
@@ -146,8 +146,8 @@ const handleCart = () => {
 
 @media (min-width: 768px) {
   .header-main {
-    padding-left: 120px;
-    padding-right: 175px;
+    padding-left: clamp(1rem, 8vw, 120px);
+    padding-right: clamp(1rem, 10vw, 175px);
   }
 }
 
@@ -178,16 +178,8 @@ const handleCart = () => {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   line-height: 24px;
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 3vw, 1.625rem);
   text-align: left;
-  width: 104px;
-  height: 24px;
-}
-
-@media (min-width: 768px) {
-  .brand-text {
-    font-size: 26px;
-  }
 }
 
 /* Desktop Navigation */
@@ -211,11 +203,9 @@ const handleCart = () => {
   transition: all 0.2s;
   white-space: nowrap;
   font-family: Roboto, sans-serif;
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 24px;
   text-align: center;
-  width: 124px;
-  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,9 +246,8 @@ const handleCart = () => {
   background: linear-gradient(85deg, #1427FF 0%, #A114FF 100%);
   box-shadow: 0px 0px 8px 0px rgba(34, 37, 255, 0.29);
   height: 40px;
-  width: 117px;
   color: white;
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   border-radius: 10px;
 }
 
@@ -293,18 +282,20 @@ const handleCart = () => {
   justify-content: center;
   font-weight: 500;
   transition: all 0.2s;
-  width: 54px;
+  min-width: 54px;
   height: 30px;
   border-radius: 6px;
   font-size: 0.75rem;
+  padding: 0 0.75rem;
 }
 
 @media (min-width: 768px) {
   .auth-button {
-    width: 66px;
+    min-width: 66px;
     height: 36px;
     border-radius: 8px;
     font-size: 0.875rem;
+    padding: 0 1rem;
   }
 }
 
