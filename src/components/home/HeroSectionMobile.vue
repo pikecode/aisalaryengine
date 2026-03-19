@@ -1,6 +1,6 @@
 <template>
   <section class="hero-section-mobile">
-    <div class="relative max-w-6xl mx-auto px-4 w-full">
+    <div class="relative mx-auto px-4 w-full">
       <div class="text-center">
 
         <!-- Small Title -->
@@ -14,7 +14,7 @@
         </h1>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col gap-4 justify-center mb-12">
+        <div class="flex flex-row gap-3 justify-center mb-8">
           <button class="cta-button cta-button-primary">
             成为签约创客
           </button>
@@ -24,110 +24,87 @@
         </div>
 
         <!-- Search Card -->
-        <div class="w-full bg-white rounded-3xl shadow-2xl p-6 sm:p-8 mb-8">
+        <div class="w-full search-card mb-5">
           <!-- Quick Search Title -->
-          <div class="flex items-center gap-2 mb-5">
-            <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
-            <span class="text-sm font-medium text-gray-800">快速搜索</span>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0"></span>
+            <span class="quick-search-title">快速搜索</span>
           </div>
 
           <!-- Search Input -->
-          <div class="flex flex-col gap-3 mb-5">
-            <div class="flex items-center gap-3 bg-gray-100 rounded-xl px-4 sm:px-5 py-3 sm:py-3.5">
-              <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <input
-                v-model="searchQuery"
-                type="text"
-                placeholder="请输入关键词"
-                class="flex-1 bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400 min-w-0"
-              />
-            </div>
-            <button class="w-full font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl text-sm bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all">
+          <div class="search-container mb-4">
+            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              v-model="searchQuery"
+              type="text"
+              placeholder="请输入关键词，快速找到适合你的项目"
+              class="search-input"
+            />
+            <button class="search-button">
               开始创作
             </button>
           </div>
 
           <!-- Hot Tags -->
-          <div class="flex items-center gap-2 sm:gap-2.5 flex-wrap">
-            <span class="text-sm text-gray-600 flex-shrink-0">热门：</span>
-            <button class="text-xs sm:text-sm px-3 sm:px-4 py-1.5 rounded-md bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors whitespace-nowrap">
-              AI写作
-            </button>
-            <button class="text-xs sm:text-sm px-3 sm:px-4 py-1.5 rounded-md bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors whitespace-nowrap">
-              自媒体
-            </button>
-            <button class="text-xs sm:text-sm px-3 sm:px-4 py-1.5 rounded-md bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors whitespace-nowrap">
-              电商项目
-            </button>
-            <button class="text-xs sm:text-sm px-3 sm:px-4 py-1.5 rounded-md bg-green-100 text-green-700 hover:bg-green-200 transition-colors whitespace-nowrap">
-              知识付费
-            </button>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="hot-label">热门：</span>
+            <button class="hot-tag bg-blue-100 text-blue-700">AI写作</button>
+            <button class="hot-tag bg-orange-100 text-orange-700">自媒体</button>
+            <button class="hot-tag bg-purple-100 text-purple-700">电商项目</button>
+            <button class="hot-tag bg-green-100 text-green-700">知识付费</button>
           </div>
         </div>
 
         <!-- Filter Pills -->
-        <div class="flex flex-col gap-3 mb-12 px-2">
-          <button class="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-full border border-yellow-400 bg-yellow-50/80 text-gray-800 hover:bg-yellow-100 transition-all">
-            <span class="text-base">💰</span>
-            <span class="text-sm font-medium whitespace-nowrap">低于1000元</span>
-            <span class="text-sm">→</span>
+        <div class="flex flex-row gap-3 justify-center mb-5 flex-wrap">
+          <button class="filter-pill filter-pill-yellow">
+            <img src="@/assets/low.png" alt="" class="filter-icon-img" />
+            <span class="filter-text">低于1000元</span>
+            <img src="@/assets/arrow.png" alt="" class="filter-arrow-img" />
           </button>
-          <button class="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-full border border-blue-400 bg-blue-50/80 text-gray-800 hover:bg-blue-100 transition-all">
-            <span class="text-base">🕐</span>
-            <span class="text-sm font-medium whitespace-nowrap">副业/碎片时间</span>
-            <span class="text-sm">→</span>
+          <button class="filter-pill filter-pill-blue">
+            <img src="@/assets/time.png" alt="" class="filter-icon-img" />
+            <span class="filter-text">副业/碎片时间</span>
+            <img src="@/assets/arrow.png" alt="" class="filter-arrow-img" />
           </button>
-          <button class="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-full border border-green-400 bg-green-50/80 text-gray-800 hover:bg-green-100 transition-all">
-            <span class="text-base">✓</span>
-            <span class="text-sm font-medium whitespace-nowrap">无代码</span>
-            <span class="text-sm">→</span>
+          <button class="filter-pill filter-pill-green">
+            <img src="@/assets/code.png" alt="" class="filter-icon-img" />
+            <span class="filter-text">无代码</span>
+            <img src="@/assets/arrow.png" alt="" class="filter-arrow-img" />
           </button>
-        </div>
-
-        <!-- Stats Cards -->
-        <div class="w-full bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg p-5 sm:p-6">
-          <div class="grid grid-cols-1 gap-5 sm:gap-6">
-            <div class="flex items-center gap-3 sm:gap-4">
-              <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-                </svg>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="text-2xl sm:text-3xl font-bold text-gray-900">200+</div>
-                <div class="text-xs sm:text-sm text-gray-600">经过验证的创业副本</div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 sm:gap-4">
-              <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                </svg>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="text-2xl sm:text-3xl font-bold text-gray-900">5000+</div>
-                <div class="text-xs sm:text-sm text-gray-600">早期创客已加入</div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 sm:gap-4">
-              <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-                </svg>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="text-2xl sm:text-3xl font-bold text-gray-900">100+</div>
-                <div class="text-xs sm:text-sm text-gray-600">社区分享的实践案例</div>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
+
+      <!-- Stats Card -->
+      <div class="w-full stats-card">
+        <div class="grid grid-cols-3">
+          <div class="flex flex-col items-start gap-1">
+            <div class="flex items-center gap-1">
+              <img src="@/assets/1.png" alt="" class="stat-icon" />
+              <div class="stat-number">200+</div>
+            </div>
+            <div class="stat-label">经过验证的创业副本</div>
+          </div>
+          <div class="flex flex-col items-start gap-1">
+            <div class="flex items-center gap-1">
+              <img src="@/assets/2.png" alt="" class="stat-icon" />
+              <div class="stat-number">5000+</div>
+            </div>
+            <div class="stat-label">早期创客已加入</div>
+          </div>
+          <div class="flex flex-col items-start gap-1">
+            <div class="flex items-center gap-1">
+              <img src="@/assets/3.png" alt="" class="stat-icon" />
+              <div class="stat-number">100+</div>
+            </div>
+            <div class="stat-label">社区分享的实践案例</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </template>
@@ -142,58 +119,223 @@ const searchQuery = ref('')
 .hero-section-mobile {
   position: relative;
   overflow: hidden;
-  margin-top: -104px;
-  padding-top: 404px;
-  padding-bottom: 4rem;
-  background-image: url('/src/assets/hero-bg.png');
-  background-size: contain;
+  margin-top: -54px;
+  padding-top: 80px;
+  padding-bottom: 3rem;
+  background-image: url('@/assets/hero-bg.png');
+  background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
 .hero-subtitle {
-  font-family: 'PingFang SC', sans-serif;
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
   font-weight: bold;
-  font-size: clamp(18px, 5vw, 24px);
+  font-size: 14px;
   color: #333333;
-  line-height: 1.5;
+  line-height: 1.4;
   text-align: center;
-  margin: 0 auto 20px;
-  padding: 0 1rem;
+  margin: 0 auto 16px;
 }
 
 .hero-title {
-  font-family: 'MiSans', sans-serif;
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
   font-weight: 800;
-  font-size: clamp(24px, 7vw, 32px);
+  font-size: 26px;
   color: #333333;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: center;
   margin: 0 auto 20px;
-  padding: 0 1rem;
 }
 
 .cta-button {
-  width: 100%;
-  min-height: 56px;
-  border-radius: 100px;
-  border: 1px solid #393939;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: clamp(16px, 4vw, 18px);
-  line-height: 28px;
+  width: 103px;
+  height: 23px;
+  border-radius: 32px;
+  border: none;
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 1;
   text-align: center;
   transition: all 0.3s;
-  padding: 0.75rem 1.5rem;
+  padding: 0;
+  white-space: nowrap;
+  flex: none;
 }
 
 .cta-button-primary {
-  background-color: #393939;
+  background-color: #000000;
   color: #FFFFFF;
 }
 
 .cta-button-secondary {
-  background-color: white;
-  color: #393939;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.search-card {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 38px 0px rgba(0, 117, 192, 0.33);
+  border-radius: 20px;
+  padding: 1.25rem;
+}
+
+.quick-search-title {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  background: #F6F7FA;
+  border-radius: 6px;
+  padding: 0 6px 0 12px;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  color: #999999;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  color: #333333;
+  min-width: 0;
+}
+
+.search-input::placeholder {
+  color: #999999;
+}
+
+.search-button {
+  height: 28px;
+  padding: 0 10px;
+  background: linear-gradient(85deg, #1427FF 0%, #A114FF 100%);
+  box-shadow: 0px 0px 2px 0px rgba(34, 37, 255, 0.29);
+  border-radius: 3px;
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  color: #FFFFFF;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.hot-label {
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #666666;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hot-tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: none;
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: 100px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+  background: #FFFFFF;
+}
+
+.filter-icon-img {
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+}
+
+.filter-text {
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #333333;
+  line-height: 1;
+}
+
+.filter-arrow-img {
+  width: 8px;
+  height: 8px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.filter-pill-yellow {
+  border: 1.5px solid rgba(255, 204, 0, 0.5);
+  box-shadow: none;
+}
+
+.filter-pill-blue {
+  border: 1.5px solid rgba(20, 39, 255, 0.5);
+  box-shadow: 0px 0px 6px 0px rgba(20, 39, 255, 0.3);
+}
+
+.filter-pill-green {
+  border: 1.5px solid rgba(0, 197, 89, 0.5);
+  box-shadow: 0px 0px 8px 0px rgba(0, 197, 89, 0.3);
+}
+
+.stats-card {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 2px 69px 0px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  border: 1px solid #FFFFFF;
+  padding: 1.25rem;
+}
+
+.stat-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.stat-number {
+  font-family: 'PingFangSC', 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-family: 'PingFang SC', 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
 }
 </style>

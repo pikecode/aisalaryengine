@@ -132,7 +132,7 @@ const searchQuery = ref('')
   margin-top: -104px;
   padding-top: 200px;
   padding-bottom: 4rem;
-  background-image: url('/src/assets/hero-bg.png');
+  background-image: url('@/assets/hero-bg.png');
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
@@ -141,23 +141,25 @@ const searchQuery = ref('')
 .hero-subtitle {
   font-family: 'PingFang SC', sans-serif;
   font-weight: bold;
-  font-size: clamp(24px, 4vw, 32px);
-  color: #333333;
-  line-height: 1.5;
-  text-align: center;
-  margin: 0 auto 30px;
-  padding: 0 1rem;
-}
-
-.hero-title {
-  font-family: 'MiSans', sans-serif;
-  font-weight: 800;
-  font-size: clamp(48px, 8vw, 80px);
+  font-size: 32px;
   color: #333333;
   line-height: 1.2;
   text-align: center;
   margin: 0 auto 30px;
   padding: 0 1rem;
+  white-space: nowrap;
+}
+
+.hero-title {
+  font-family: 'MiSans', sans-serif;
+  font-weight: 800;
+  font-size: 80px;
+  color: #333333;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0 auto 30px;
+  padding: 0 1rem;
+  white-space: nowrap;
 }
 
 .cta-button {
