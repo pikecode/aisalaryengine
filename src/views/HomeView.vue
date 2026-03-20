@@ -1,20 +1,14 @@
 <template>
-  <div style="background-color: #F6F7FA;">
-    <AppHeader />
-    <main class="pt-[104px]">
-      <HeroSection />
-      <ProjectGrid />
-      <ValuePillars />
-      <SuccessStories />
-      <PricingSection />
-    </main>
-    <AppFooter />
-  </div>
+  <main class="pt-[104px]">
+    <HeroSection />
+    <ProjectGrid />
+    <ValuePillars />
+    <SuccessStories />
+    <PricingSection />
+  </main>
 </template>
 
 <script setup lang="ts">
-import AppHeader from '@/components/common/AppHeader.vue'
-import AppFooter from '@/components/common/AppFooter.vue'
 import HeroSection from '@/components/home/HeroSection.vue'
 import ProjectGrid from '@/components/home/ProjectGrid.vue'
 import SuccessStories from '@/components/home/SuccessStories.vue'

@@ -35,7 +35,6 @@
       </section>
 
     </main>
-    <AppFooter />
   </div>
 </template>
 
@@ -43,7 +42,6 @@
 import { ref, computed, onMounted } from 'vue'
 import { useProjectStore } from '@/stores/projects'
 import AppHeader from '@/components/common/AppHeader.vue'
-import AppFooter from '@/components/common/AppFooter.vue'
 import SearchSection from '@/components/project-library/SearchSection.vue'
 import FilterSidebar from '@/components/project-library/FilterSidebar.vue'
 import ProjectLibraryGrid from '@/components/project-library/ProjectLibraryGrid.vue'
