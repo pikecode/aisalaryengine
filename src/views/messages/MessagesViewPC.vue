@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col" style="background:#EBF3FF;">
-    <!-- Top Bar - Breadcrumb -->
-    <div class="bg-white border-b border-gray-200 px-6 py-4">
+    <!-- Top Bar - White Background -->
+    <div class="bg-white px-6 py-4">
       <div class="flex items-center justify-between">
         <!-- Breadcrumb -->
         <div class="flex items-center gap-2">
@@ -14,18 +14,18 @@
       </div>
     </div>
 
-    <!-- Main Content - Left & Right -->
-    <div class="flex flex-1">
+    <!-- Main Content -->
+    <div class="flex flex-1 p-4 gap-4">
       <!-- Left Sidebar - Type Card -->
-      <div class="w-[200px] bg-white border-r border-gray-200 p-4 flex-shrink-0">
-        <div class="bg-white rounded-lg border border-gray-200 p-4">
+      <div class="w-[200px] flex-shrink-0">
+        <div class="bg-white rounded-lg p-4">
           <h3 class="text-sm mb-3" style="font-family:'Source Han Sans CN',sans-serif;font-weight:500;color:#393939;">类型</h3>
-          <div class="space-y-2">
+          <div class="space-y-1">
             <button
               v-for="type in types"
               :key="type.id"
               @click="activeType = type.id"
-              class="w-full text-left px-3 py-2 rounded transition-all"
+              class="w-full text-left px-3 py-2 rounded transition-all text-sm"
               :class="activeType === type.id ? 'type-active' : 'type-inactive'"
             >
               {{ type.label }}
@@ -35,14 +35,14 @@
       </div>
 
       <!-- Right Content -->
-      <div class="flex-1 flex flex-col">
+      <div class="flex-1 flex flex-col bg-white rounded-lg overflow-hidden">
         <!-- Search -->
-        <div class="px-6 py-3 bg-white border-b border-gray-100">
+        <div class="px-4 py-3">
           <div class="relative">
             <input
               type="text"
               placeholder="搜索"
-              class="w-full pl-10 pr-4 py-2.5 rounded-lg outline-none"
+              class="w-full pl-10 pr-4 py-2 rounded-lg outline-none"
               style="background:#F2F2F2;font-family:'Source Han Sans CN',sans-serif;font-weight:400;font-size:14px;color:#393939;"
             />
             <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,8 +52,8 @@
         </div>
 
         <!-- Tab -->
-        <div class="bg-white px-6 border-b border-gray-100">
-          <div class="flex gap-8">
+        <div class="px-4 border-b border-gray-100">
+          <div class="flex gap-6">
             <button
               v-for="tab in tabs"
               :key="tab.id"
@@ -61,17 +61,17 @@
               class="py-3 transition-all"
               :class="activeTab === tab.id ? 'tab-active' : 'tab-inactive'"
             >
-              <span :class="activeTab === tab.id ? 'tab-text-active' : 'tab-text-inactive'">{{ tab.label }}</span>
+              {{ tab.label }}
             </button>
           </div>
         </div>
 
         <!-- Message List -->
-        <div class="flex-1 overflow-y-auto bg-white">
+        <div class="flex-1 overflow-y-auto">
           <div
             v-for="msg in messages"
             :key="msg.id"
-            class="flex items-center px-6 py-4 cursor-pointer hover:bg-gray-50 border-b border-gray-100"
+            class="flex items-center px-4 py-3 cursor-pointer hover:bg-gray-50 border-b border-gray-100"
           >
             <!-- Avatar -->
             <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mr-3" :style="'background:' + msg.avatarBg">
@@ -103,10 +103,8 @@ import { ref } from 'vue'
 
 const types = [
   { id: 'all', label: '全部' },
-  { id: 'system', label: '系统通知' },
-  { id: 'activity', label: '活动' },
-  { id: 'order', label: '订单' },
-  { id: 'service', label: '客服' }
+  { id: 'interact', label: '互动消息' },
+  { id: 'system', label: '系统通知' }
 ]
 
 const tabs = [
@@ -131,35 +129,29 @@ const activeTab = ref('notify')
   background: #eff6ff;
   font-family: 'Source Han Sans CN', sans-serif;
   font-weight: 500;
-  font-size: 14px;
   color: #1427FF;
 }
 .type-inactive {
   background: transparent;
   font-family: 'Source Han Sans CN', sans-serif;
   font-weight: 400;
-  font-size: 14px;
   color: #393939;
 }
 .type-inactive:hover {
   background: #f9fafb;
 }
 .tab-active {
-  border-bottom: 2px solid #1427FF;
-}
-.tab-inactive {
-  border-bottom: none;
-}
-.tab-text-active {
   font-family: 'Source Han Sans CN', sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #1427FF;
+  border-bottom: 2px solid #1427FF;
 }
-.tab-text-inactive {
+.tab-inactive {
   font-family: 'Source Han Sans CN', sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #999999;
+  border-bottom: none;
 }
 </style>
