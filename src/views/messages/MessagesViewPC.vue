@@ -1,72 +1,73 @@
 <template>
-  <div class="flex min-h-screen">
-    <!-- Left Sidebar - Type Card -->
-    <div class="w-[200px] bg-white border-r border-gray-200 p-4 flex-shrink-0">
-      <div class="bg-white rounded-lg border border-gray-200 p-4">
-        <h3 class="text-sm mb-3" style="font-family:'Source Han Sans CN',sans-serif;font-weight:500;color:#393939;">类型</h3>
-        <div class="space-y-2">
-          <button
-            v-for="type in types"
-            :key="type.id"
-            @click="activeType = type.id"
-            class="w-full text-left px-3 py-2 rounded transition-all"
-            :class="activeType === type.id ? 'type-active' : 'type-inactive'"
-          >
-            {{ type.label }}
-          </button>
+  <div class="flex flex-col min-h-screen">
+    <!-- Top Bar - Breadcrumb -->
+    <div class="bg-white border-b border-gray-200 px-6 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2">
+          <span style="font-family:'Source Han Sans CN',sans-serif;font-weight:400;font-size:14px;color:#999999;">首页</span>
+          <span style="color:#999999;">/</span>
+          <span style="font-family:'Source Han Sans CN',sans-serif;font-weight:400;font-size:14px;color:#393939;">消息中心</span>
         </div>
+        <!-- Button -->
+        <button class="px-4 py-2 rounded text-white text-sm" style="background:#1427FF;font-family:'Source Han Sans CN',sans-serif;font-weight:400;">全部已读</button>
       </div>
     </div>
 
-    <!-- Right Content -->
-    <div class="flex-1 flex flex-col">
-      <!-- Top Bar with Breadcrumb & Button -->
-      <div class="bg-white border-b border-gray-200 px-6 py-4">
-        <div class="flex items-center justify-between">
-          <!-- Breadcrumb -->
-          <div class="flex items-center gap-2">
-            <span style="font-family:'Source Han Sans CN',sans-serif;font-weight:400;font-size:14px;color:#999999;">首页</span>
-            <span style="color:#999999;">/</span>
-            <span style="font-family:'Source Han Sans CN',sans-serif;font-weight:400;font-size:14px;color:#393939;">消息中心</span>
+    <!-- Main Content - Left & Right -->
+    <div class="flex flex-1">
+      <!-- Left Sidebar - Type Card -->
+      <div class="w-[200px] bg-white border-r border-gray-200 p-4 flex-shrink-0">
+        <div class="bg-white rounded-lg border border-gray-200 p-4">
+          <h3 class="text-sm mb-3" style="font-family:'Source Han Sans CN',sans-serif;font-weight:500;color:#393939;">类型</h3>
+          <div class="space-y-2">
+            <button
+              v-for="type in types"
+              :key="type.id"
+              @click="activeType = type.id"
+              class="w-full text-left px-3 py-2 rounded transition-all"
+              :class="activeType === type.id ? 'type-active' : 'type-inactive'"
+            >
+              {{ type.label }}
+            </button>
           </div>
-          <!-- Button -->
-          <button class="px-4 py-2 rounded text-white text-sm" style="background:#1427FF;font-family:'Source Han Sans CN',sans-serif;font-weight:400;">全部已读</button>
         </div>
       </div>
 
-      <!-- Search -->
-      <div class="px-6 py-3 bg-white">
-        <div class="relative">
-          <input
-            type="text"
-            placeholder="搜索"
-            class="w-full pl-10 pr-4 py-2.5 rounded-lg outline-none"
-            style="background:#F2F2F2;font-family:'Source Han Sans CN',sans-serif;font-weight:400;font-size:14px;color:#393939;"
-          />
-          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
+      <!-- Right Content -->
+      <div class="flex-1 flex flex-col">
+        <!-- Search -->
+        <div class="px-6 py-3 bg-white border-b border-gray-100">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="搜索"
+              class="w-full pl-10 pr-4 py-2.5 rounded-lg outline-none"
+              style="background:#F2F2F2;font-family:'Source Han Sans CN',sans-serif;font-weight:400;font-size:14px;color:#393939;"
+            />
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
         </div>
-      </div>
 
-      <!-- Tab -->
-      <div class="bg-white px-6 border-b border-gray-100">
-        <div class="flex gap-8">
-          <button
-            v-for="tab in tabs"
-            :key="tab.id"
-            @click="activeTab = tab.id"
-            class="py-3 transition-all"
-            :class="activeTab === tab.id ? 'tab-active' : 'tab-inactive'"
-          >
-            <span :class="activeTab === tab.id ? 'tab-text-active' : 'tab-text-inactive'">{{ tab.label }}</span>
-          </button>
+        <!-- Tab -->
+        <div class="bg-white px-6 border-b border-gray-100">
+          <div class="flex gap-8">
+            <button
+              v-for="tab in tabs"
+              :key="tab.id"
+              @click="activeTab = tab.id"
+              class="py-3 transition-all"
+              :class="activeTab === tab.id ? 'tab-active' : 'tab-inactive'"
+            >
+              <span :class="activeTab === tab.id ? 'tab-text-active' : 'tab-text-inactive'">{{ tab.label }}</span>
+            </button>
+          </div>
         </div>
-      </div>
 
-      <!-- Message List -->
-      <div class="flex-1 overflow-y-auto">
-        <div class="bg-white">
+        <!-- Message List -->
+        <div class="flex-1 overflow-y-auto bg-white">
           <div
             v-for="msg in messages"
             :key="msg.id"
