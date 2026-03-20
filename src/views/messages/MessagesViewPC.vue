@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex min-h-screen bg-gray-50">
     <!-- Main Content -->
     <div class="flex-1">
       <!-- Top Bar -->
