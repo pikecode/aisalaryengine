@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen flex flex-col">
-    <AppHeader />
-    <div class="flex-1 flex pt-[60px] pb-16">
+  <div class="flex">
+    <!-- Left Sidebar -->
+    <div class="w-[240px] bg-white border-r border-gray-200 flex flex-col fixed top-[60px] bottom-0">
       <!-- Left Sidebar -->
       <div class="w-[240px] bg-white border-r border-gray-200 flex flex-col">
         <!-- Logo -->
@@ -41,7 +41,7 @@
       </div>
 
       <!-- Right Content -->
-      <div class="flex-1 flex flex-col bg-gray-50">
+      <div class="flex-1 flex flex-col bg-gray-50 ml-[240px]">
         <!-- Header -->
         <div class="bg-white border-b border-gray-200 px-6 py-4">
           <div class="flex items-center justify-between">
@@ -111,14 +111,11 @@
         </div>
       </div>
     </div>
-    <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, h } from 'vue'
-import AppHeader from '@/components/common/AppHeader.vue'
-import AppFooter from '@/components/common/AppFooter.vue'
 
 // Icons as functional components
 const SystemIcon = () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [

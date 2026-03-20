@@ -29,24 +29,27 @@ const router = createRouter({
       component: () => import('@/views/Membership.vue')
     },
     {
+      path: '/messages',
+      name: 'messages',
+      component: () => import('@/views/MessagesView.vue')
+    },
+    {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/LoginView.vue')
+      component: () => import('@/views/LoginView.vue'),
+      meta: { layout: 'blank' }
     },
     {
       path: '/register',
       name: 'register',
-      component: () => import('@/views/RegisterView.vue')
+      component: () => import('@/views/RegisterView.vue'),
+      meta: { layout: 'blank' }
     },
     {
       path: '/forgot-password',
       name: 'forgot-password',
-      component: () => import('@/views/ForgotPasswordView.vue')
-    },
-    {
-      path: '/messages',
-      name: 'messages',
-      component: () => import('@/views/MessagesView.vue')
+      component: () => import('@/views/ForgotPasswordView.vue'),
+      meta: { layout: 'blank' }
     }
   ],
   scrollBehavior() {
