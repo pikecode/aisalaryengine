@@ -101,6 +101,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import type { NavItem } from '@/types'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 import IconButton from './IconButton.vue'
@@ -112,11 +113,13 @@ const navItems: NavItem[] = [
   { label: '定价与会员', path: '/membership' }
 ]
 
+const router = useRouter()
+
 const currentLang = ref('zh')
 const menuOpen = ref(false)
 const handleLangChange = (lang: string) => { currentLang.value = lang }
 const handleSearch = () => {}
-const handleNotification = () => {}
+const handleNotification = () => { router.push('/messages') }
 const handleCart = () => {}
 </script>
 

@@ -70,9 +70,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import type { NavItem } from '@/types'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 import IconButton from './IconButton.vue'
+
+const router = useRouter()
 
 const navItems: NavItem[] = [
   { label: 'AI创业机会库', path: '/projects' },
@@ -84,6 +87,6 @@ const navItems: NavItem[] = [
 const currentLang = ref('zh')
 const handleLangChange = (lang: string) => { currentLang.value = lang }
 const handleSearch = () => {}
-const handleNotification = () => {}
+const handleNotification = () => { router.push('/messages') }
 const handleCart = () => {}
 </script>

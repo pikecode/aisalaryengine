@@ -5,3 +5,4 @@ dist/
 screenshot-*.png
 *.local
 .DS_Store
+.gstack/
