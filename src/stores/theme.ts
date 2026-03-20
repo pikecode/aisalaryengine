@@ -4,7 +4,7 @@ export type Theme = 'dark-purple' | 'light'
 
 export const useThemeStore = defineStore('theme', {
   state: () => ({
-    current: (localStorage.getItem('theme') as Theme) || 'dark-purple'
+    current: (localStorage.getItem('theme') as Theme) || 'light'
   }),
 
   actions: {

@@ -15,7 +15,7 @@
 }
 
 :root[data-theme="light"] {
-  --bg-primary: #f8fafc;
+  --bg-primary: #ffffff;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
   --text-primary: #1e293b;
