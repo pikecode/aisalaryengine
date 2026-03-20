@@ -1,6 +1,5 @@
 <template>
   <div>
-    <AppHeader />
     <main class="pt-16 min-h-screen bg-gray-50">
 
       <!-- Community Header -->
@@ -218,7 +217,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import AppHeader from '@/components/common/AppHeader.vue'
 import SkeletonList from '@/components/common/SkeletonList.vue'
 
 // 加载状态

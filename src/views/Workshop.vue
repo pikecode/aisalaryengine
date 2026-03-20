@@ -1,6 +1,5 @@
 <template>
   <div>
-    <AppHeader />
     <main class="pt-16 min-h-screen bg-gray-50">
 
       <!-- Hero Section -->
@@ -109,5 +108,4 @@
 </template>
 
 <script setup lang="ts">
-import AppHeader from '@/components/common/AppHeader.vue'
 </script>

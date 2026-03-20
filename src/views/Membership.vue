@@ -1,6 +1,5 @@
 <template>
   <div>
-    <AppHeader />
     <main class="pt-16 min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
 
       <!-- Hero Section -->
@@ -74,7 +73,6 @@
 </template>
 
 <script setup lang="ts">
-import AppHeader from '@/components/common/AppHeader.vue'
 import PricingSection from '@/components/home/PricingSection.vue'
 
 // 订阅历史数据
