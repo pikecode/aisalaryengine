@@ -26,7 +26,7 @@
       <div class="flex items-center gap-3 flex-shrink-0">
 
         <!-- 打卡按钮 -->
-        <button class="flex items-center gap-1 px-3 h-9 rounded-[10px] text-white font-medium text-sm whitespace-nowrap" style="background: linear-gradient(85deg, #1427FF 0%, #A114FF 100%); box-shadow: 0px 0px 8px 0px rgba(34,37,255,0.29);">
+        <button class="flex items-center gap-1 px-3 h-9 rounded-[10px] text-white font-medium text-sm whitespace-nowrap" style="background: linear-gradient(85deg, #1427FF 0%, #A114FF 100%); box-shadow: 0px 0px 8px 0px rgba(34,37,255,0.29);" @click="checkinOpen = true">
           打卡
           <img src="@/assets/checkin-icon.svg" alt="打卡" class="w-8 h-8" />
         </button>
@@ -75,6 +75,7 @@ import type { NavItem } from '@/types'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 import IconButton from './IconButton.vue'
 
+const checkinOpen = defineModel<boolean>('checkinOpen', { default: false })
 const router = useRouter()
 
 const navItems: NavItem[] = [

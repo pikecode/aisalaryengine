@@ -13,6 +13,12 @@
         <!-- 未登录 -->
         <span class="text-sm text-gray-400">未登录</span>
 
+        <!-- 打卡 -->
+        <button class="flex items-center gap-1 px-2 h-7 rounded-[6px] text-white whitespace-nowrap" style="background: linear-gradient(85deg, #1427FF 0%, #A114FF 100%); box-shadow: 0px 0px 8px 0px rgba(34,37,255,0.29); font-size: 10px;" @click="checkinOpen = true">
+          打卡
+          <img src="@/assets/checkin-icon.svg" alt="打卡" class="w-5 h-5" />
+        </button>
+
         <!-- Search -->
         <IconButton @click="handleSearch">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,6 +112,7 @@ import type { NavItem } from '@/types'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 import IconButton from './IconButton.vue'
 
+const checkinOpen = defineModel<boolean>('checkinOpen', { default: false })
 const navItems: NavItem[] = [
   { label: 'AI创业机会库', path: '/projects' },
   { label: 'AI项目工作台', path: '/workshop' },
