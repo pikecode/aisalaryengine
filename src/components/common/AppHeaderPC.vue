@@ -89,5 +89,5 @@ const currentLang = ref('zh')
 const handleLangChange = (lang: string) => { currentLang.value = lang }
 const handleSearch = () => {}
 const handleNotification = () => { router.push('/messages') }
-const handleCart = () => {}
+const handleCart = () => { router.push('/cart') }
 </script>
